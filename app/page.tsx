@@ -33,9 +33,7 @@ export const metadata = {
     site: "https://github.com/nobruf/shadcn-landing-page.git",
     title: "Shadcn - Landing template",
     description: "Free Shadcn landing page for developers",
-    images: [
-      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
-    ],
+    images: ["https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg"],
   },
 };
 
@@ -43,13 +41,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <SponsorsSection />
+      {/* <SponsorsSection /> */}
       <BenefitsSection />
       <FeaturesSection />
       <ServicesSection />
-      <TestimonialSection />
-      <TeamSection />
-      <CommunitySection />
+      {/* <TestimonialSection /> */}
       <PricingSection />
       <ContactSection />
       <FAQSection />
