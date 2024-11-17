@@ -7,6 +7,7 @@ import Image from "next/image";
 import { BorderBeam } from "@/components/ui/border-beam";
 import Particles from "@/components/ui/particles";
 import { ShinyBadge } from "@/components/ui/shiny-badge";
+import SparklesText from "@/components/ui/sparkles-text";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -23,11 +24,16 @@ export const HeroSection = () => {
         <div className="text-center space-y-8">
           <ShinyBadge />
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
-            <h1>Your Brand, Front and Center in AI Search</h1>
+            <div className="flex items-center justify-center">
+              <p>Own the</p>
+
+              <SparklesText text="Spotlight" className="ml-4 text-primary text-4xl md:text-6xl" />
+            </div>
+            <p>in Every AI Search</p>
           </div>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`Reach millions of consumers who are using AI to discover new products and brands.`}
+            {`Connect with customers who are using AI to discover brands like yours.`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
