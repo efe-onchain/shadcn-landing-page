@@ -40,17 +40,15 @@ export const BenefitsSection = () => {
   return (
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
-        {/* <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
-
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
-          </p> */}
-        <AnimatedBeamMultipleOutputDemo />
+        <div className="w-full flex flex-col justify-start items-start">
+          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Shortcut to Success</h2>
+          <p className="text-muted-foreground mb-2">
+            Velori enhances your visibility on AI-driven search platforms, ensuring your brand and products reach the
+            right audience.
+          </p>
+          <AnimatedBeamMultipleOutputDemo />
+        </div>
         <div className="grid lg:grid-cols-2 gap-4 w-full">
           {benefitList.map(({ icon, title, description }, index) => (
             <Card

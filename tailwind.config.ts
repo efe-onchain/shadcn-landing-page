@@ -103,6 +103,14 @@ module.exports = {
   				'30%, 60%': {
   					'background-position': 'calc(100% + var(--shiny-width)) 0'
   				}
+  			},
+  			orbit: {
+  				'0%': {
+  					transform: 'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)'
+  				},
+  				'100%': {
+  					transform: 'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)'
+  				}
   			}
   		},
   		animation: {
@@ -111,7 +119,8 @@ module.exports = {
   			'collapsible-down': 'collapsible-down 0.2s ease-in-out',
   			'collapsible-up': 'collapsible-up 0.2s ease-in-out',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			'shiny-text': 'shiny-text 8s infinite'
+  			'shiny-text': 'shiny-text 8s infinite',
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
   		}
   	}
   },
