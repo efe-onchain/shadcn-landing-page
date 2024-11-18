@@ -37,12 +37,12 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
   return (
     <div
       className={cn(
-        "relative flex h-[500px] w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl",
+        "relative flex h-[450px] w-full items-center justify-center overflow-hidden bg-background ",
         className
       )}
       ref={containerRef}
     >
-      <div className="flex size-full flex-row items-stretch justify-between gap-10 max-w-lg">
+      <div className="flex size-full flex-row items-stretch justify-between gap-4 max-w-lg">
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div1Ref}>
             <Icons.gemini />
