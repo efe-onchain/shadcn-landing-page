@@ -10,58 +10,52 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "BrainCircuit",
+    title: "AI-Powered Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Leverage advanced AI algorithms to analyze and boost your rankings across AI search platforms effortlessly.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "BarChart2",
+    title: "Performance Insights",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Access in-depth analytics and reports to track your search visibility and optimize your strategy over time.",
   },
   {
     icon: "Goal",
-    title: "Targeted Content",
+    title: "Keyword Targeting",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Identify high-impact keywords and optimize your content for maximum visibility on AI-driven search engines.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Zap",
+    title: "Automated Suggestions",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Receive intelligent recommendations for content improvements and ranking enhancements based on platform-specific criteria.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "AArrowUp",
+    title: "Content Enhancements",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Optimize metadata, structure, and presentation to align with AI search platform algorithms for better discoverability.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+    icon: "Activity",
+    title: "Trend Tracking",
+    description: "Stay informed on evolving AI search trends and adapt your strategy to maintain a competitive edge.",
   },
 ];
 
 export const FeaturesSection = () => {
   return (
     <section id="features" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
-      </h2>
+      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Features</h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
-      </h2>
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">What Makes Us Different</h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        We combine advanced AI with simplicity, helping your content rank higher while engaging your audience
+        effectively.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -81,9 +75,7 @@ export const FeaturesSection = () => {
                 <CardTitle>{title}</CardTitle>
               </CardHeader>
 
-              <CardContent className="text-muted-foreground text-center">
-                {description}
-              </CardContent>
+              <CardContent className="text-muted-foreground text-center">{description}</CardContent>
             </Card>
           </div>
         ))}
