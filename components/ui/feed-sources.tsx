@@ -42,7 +42,7 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
       )}
       ref={containerRef}
     >
-      <div className="flex size-full flex-row items-stretch justify-between gap-4 max-w-lg">
+      <div className="flex size-full flex-row items-stretch justify-between gap-2 max-w-lg">
         <div className="flex flex-col justify-center gap-2">
           <Circle ref={div1Ref}>
             <Icons.gemini />
@@ -61,8 +61,8 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
           </Circle>
         </div>
         <div className="flex flex-col justify-center">
-          <Circle ref={div6Ref} className="size-16">
-            <Icons.notion />
+          <Circle ref={div6Ref} className="size-16 bg-primary">
+            <p className="text-5xl font-bold text-white">V</p>
           </Circle>
         </div>
         <div className="flex flex-col justify-center">

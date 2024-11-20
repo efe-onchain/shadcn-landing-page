@@ -12,21 +12,21 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "Blocks",
-    title: "Increase Visibility",
+    title: "Track Your Brand's Visibility",
     description:
-      "Boost your rankings on AI-driven search platforms to ensure your brand is seen by a broader and more relevant audience.",
+      "Monitor your visibility on AI-driven search platforms to ensure your brand is seen by a broader and more relevant audience.",
   },
   {
     icon: "LineChart",
-    title: "Drive Targeted Traffic",
+    title: "Monitor Product Performance",
     description:
-      "Optimize for AI searches to attract highly targeted users who are actively looking for solutions you provide.",
+      "Learn how your products are performing on AI-driven search platforms to optimize your marketing strategy.",
   },
   {
-    icon: "Sparkle",
-    title: "Stay Ahead of Trends",
+    icon: "Library",
+    title: "Discover AI-Favored Sources",
     description:
-      "Leverage the latest in AI search technology to maintain a competitive edge in your industry and adapt to changing user behavior.",
+      "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
   },
   {
     icon: "Lightbulb",
@@ -41,10 +41,10 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-20">
         <div className="w-full flex flex-col justify-start items-start">
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Your Shortcut to Customers</h2>
+          <h2 className="text-lg text-primary mb-2 tracking-wider">Tracking</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"> How Does AI Talk About Your Brand?</h2>
           <p className="text-muted-foreground mb-2">
-            Velori enhances your visibility on AI-driven search platforms, ensuring your brand and products reach the
+            Velori tracks your visibility on AI-driven search platforms, ensuring your brand and products reach the
             right audience.
           </p>
           <AnimatedBeamMultipleOutputDemo />

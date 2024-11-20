@@ -2,33 +2,30 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { OrbitingCirclesDemo } from "@/components/ui/oribiting-circles-demo";
 
-enum ProService {
+enum Beta {
   YES = 1,
   NO = 0,
 }
 interface ServiceProps {
   title: string;
-  pro: ProService;
+  pro: Beta;
   description: string;
 }
 const serviceList: ServiceProps[] = [
   {
-    title: "Brand Visibility",
-    description:
-      "Discover the visibility of your brand on AI search platforms. Compare your performance with competitors.",
-    pro: 0,
+    title: "Your Brand",
+    description: "Know what exactly to do to improve your brand's visibility on AI platforms.",
+    pro: 1,
   },
   {
-    title: "Product Visibility",
-    description:
-      "Discover the visibility of your products on AI search platforms. Compare your performance with competitors.",
-    pro: 0,
+    title: "Your Products",
+    description: "Get actionable insights to enhance your products' discoverability across AI search platforms.",
+    pro: 1,
   },
   {
-    title: "Keyword Tracking",
-    description:
-      "Monitor high-impact keywords to stay ahead of trends and optimize your content strategy for better rankings.",
-    pro: 0,
+    title: "Most Relevant Sources",
+    description: "Target the right sources to boost your visibility.",
+    pro: 1,
   },
   {
     title: "Skyrocket Your Visibility",
@@ -41,12 +38,14 @@ const serviceList: ServiceProps[] = [
 export const ServicesSection = () => {
   return (
     <section id="services" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Services</h2>
+      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Optimization</h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">Grow Your Business</h2>
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4 text-gradient bg-clip-text bg-gradient-to-r from-primary to-secondary">
+        Enhance Your Brand's Visibility
+      </h2>
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Velori is your shortcut to success. We help you boost your visibility on AI-driven search platforms, ensuring
-        your brand and products reach the right audience.
+        Velori improves your brand's and products' visibility on AI-driven search platforms. We ensure that your
+        offerings are displayed, connecting you with the right audience and maximizing your reach.
       </h3>
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="grid sm:grid-cols-2 gap-4 w-full mx-auto">
@@ -57,11 +56,11 @@ export const ServicesSection = () => {
                 <CardDescription>{description}</CardDescription>
               </CardHeader>
               <Badge
-                data-pro={ProService.YES === pro}
+                data-pro={Beta.YES === pro}
                 variant="secondary"
                 className="absolute -top-2 -right-3 data-[pro=false]:hidden"
               >
-                PRO
+                BETA
               </Badge>
             </Card>
           ))}

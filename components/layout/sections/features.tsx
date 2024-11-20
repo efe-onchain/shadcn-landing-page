@@ -10,20 +10,20 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "BrainCircuit",
-    title: "AI-Powered Optimization",
+    icon: "Fingerprint",
+    title: "Brand Visibility Tracking",
     description:
-      "Leverage advanced AI algorithms to analyze and boost your rankings across AI search platforms effortlessly.",
+      "Track your brand's visibility across AI search platforms to ensure your brand is seen by a broader and more relevant audience.",
   },
   {
-    icon: "BarChart2",
-    title: "Performance Insights",
+    icon: "Package",
+    title: "Product Performance Tracking",
     description:
-      "Access in-depth analytics and reports to track your search visibility and optimize your strategy over time.",
+      "Track your products' performance across AI search platforms to ensure your products are seen by a broader and more relevant audience.",
   },
   {
     icon: "Goal",
-    title: "Keyword Targeting",
+    title: "Keyword Tracking",
     description:
       "Identify high-impact keywords and optimize your content for maximum visibility on AI-driven search engines.",
   },
@@ -41,8 +41,9 @@ const featureList: FeaturesProps[] = [
   },
   {
     icon: "Activity",
-    title: "Trend Tracking",
-    description: "Stay informed on evolving AI search trends and adapt your strategy to maintain a competitive edge.",
+    title: "Drive Traffic",
+    description:
+      "Drive more traffic to your sales-channel by identifying and targeting high-performing keywords and sources.",
   },
 ];
 
@@ -51,11 +52,10 @@ export const FeaturesSection = () => {
     <section id="features" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Features</h2>
 
-      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">What Makes Us Different</h2>
+      <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">The Next-Generation of SEO</h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        We combine advanced AI with simplicity, helping your content rank higher while engaging your audience
-        effectively.
+        Discover how our innovative features can enhance your visibility and performance on AI-driven search platforms.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

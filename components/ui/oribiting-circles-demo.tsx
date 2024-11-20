@@ -10,7 +10,7 @@ export function OrbitingCirclesDemo() {
 
       {/* Inner Circles */}
       <OrbitingCircles className="size-[30px] border-none bg-transparent" duration={20} delay={20} radius={80}>
-        <Icons.perplexity />
+        <Icons.gemini />
       </OrbitingCircles>
       <OrbitingCircles className="size-[30px] border-none bg-transparent" duration={20} delay={10} radius={80}>
         <Icons.claude />
@@ -26,7 +26,7 @@ export function OrbitingCirclesDemo() {
         <Icons.openai />
       </OrbitingCircles>
       <OrbitingCircles className="size-[50px] border-none bg-transparent" radius={190} duration={20} delay={20} reverse>
-        <Icons.gemini />
+        <Icons.perplexity />
       </OrbitingCircles>
     </div>
   );

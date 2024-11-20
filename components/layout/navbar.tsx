@@ -107,7 +107,7 @@ export const Navbar = () => {
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
               <Separator className="mb-2" />
 
-              <ToggleTheme />
+              <div />
             </SheetFooter>
           </SheetContent>
         </Sheet>
@@ -151,9 +151,7 @@ export const Navbar = () => {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="hidden lg:flex">
-        <ToggleTheme />
-      </div>
+      <div className="hidden lg:flex w-12" />
     </header>
   );
 };
