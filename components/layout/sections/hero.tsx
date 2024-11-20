@@ -8,6 +8,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import Particles from "@/components/ui/particles";
 import { ShinyBadge } from "@/components/ui/shiny-badge";
 import SparklesText from "@/components/ui/sparkles-text";
+import Link from "next/link";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -22,7 +23,9 @@ export const HeroSection = () => {
       />
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-12 md:py-24">
         <div className="text-center space-y-8">
-          <ShinyBadge />
+          <Link href="/#benefits">
+            <ShinyBadge />
+          </Link>
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <div className="flex items-center justify-center">
               <p>Own the</p>
