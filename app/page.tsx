@@ -11,28 +11,30 @@ import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "Shadcn - Landing template",
-  description: "Free Shadcn landing page for developers",
+  title: "Velori - AI Search Visibility Platform",
+  description: "Track and optimize your brand's visibility across AI-driven search platforms",
   openGraph: {
     type: "website",
-    url: "https://github.com/nobruf/shadcn-landing-page.git",
-    title: "Shadcn - Landing template",
-    description: "Free Shadcn landing page for developers",
+    url: "https://velori.com",
+    title: "Velori - AI Search Visibility Platform",
+    description:
+      "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
     images: [
       {
-        url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Shadcn - Landing template",
+        alt: "Velori AI Search Visibility Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://github.com/nobruf/shadcn-landing-page.git",
-    title: "Shadcn - Landing template",
-    description: "Free Shadcn landing page for developers",
-    images: ["https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/shadcn-vue.jpg"],
+    site: "@velori",
+    title: "Velori - AI Search Visibility Platform",
+    description:
+      "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
+    images: ["/og-image.jpg"],
   },
 };
 

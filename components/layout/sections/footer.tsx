@@ -1,3 +1,4 @@
+import { Circle } from "@/components/ui/feed-sources";
 import { Separator } from "@/components/ui/separator";
 import { ChevronsDownIcon } from "lucide-react";
 import Link from "next/link";
@@ -9,9 +10,10 @@ export const FooterSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
-              <ChevronsDownIcon className="w-9 h-9 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary" />
-
-              <h3 className="text-2xl">Velori</h3>
+              <Circle className="size-10 mr-2 bg-primary">
+                <p className="text-3xl font-bold text-white">V</p>
+              </Circle>
+              <h3 className="text-3xl">Velori</h3>
             </Link>
           </div>
 

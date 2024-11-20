@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import { Icons } from "./logo-icons";
 
-const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
+export const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(
   ({ className, children }, ref) => {
     return (
       <div
