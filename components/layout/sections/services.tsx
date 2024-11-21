@@ -66,7 +66,7 @@ export const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="hidden md:block">
+        <div className="flex justify-center items-center">
           <OrbitingCirclesDemo />
         </div>
       </div>
