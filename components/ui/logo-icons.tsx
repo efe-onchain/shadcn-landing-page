@@ -20,15 +20,7 @@ export const Icons = {
     </svg>
   ),
   perplexity: () => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      shapeRendering="geometricPrecision"
-      textRendering="geometricPrecision"
-      imageRendering="optimizeQuality"
-      fillRule="evenodd"
-      clipRule="evenodd"
-      viewBox="0 0 512 509.64"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 510" width="256" height="257">
       <path
         fill="#1F1F1F"
         d="M115.613 0h280.774C459.974 0 512 52.025 512 115.612v278.415c0 63.587-52.026 115.613-115.613 115.613H115.613C52.026 509.64 0 457.614 0 394.027V115.612C0 52.025 52.026 0 115.613 0z"
@@ -41,7 +33,7 @@ export const Icons = {
     </svg>
   ),
   gemini: () => (
-    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="256" height="257">
       <path
         d="M16 8.016A8.522 8.522 0 008.016 16h-.032A8.521 8.521 0 000 8.016v-.032A8.521 8.521 0 007.984 0h.032A8.522 8.522 0 0016 7.984v.032z"
         fill="url(#prefix__paint0_radial_980_20147)"
