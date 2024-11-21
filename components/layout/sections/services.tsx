@@ -66,7 +66,9 @@ export const ServicesSection = () => {
           ))}
         </div>
 
-        <OrbitingCirclesDemo />
+        <div className="hidden md:block">
+          <OrbitingCirclesDemo />
+        </div>
       </div>
     </section>
   );
