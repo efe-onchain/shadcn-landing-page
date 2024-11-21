@@ -6,6 +6,8 @@ import { ShinyBadge } from "@/components/ui/shiny-badge";
 import SparklesText from "@/components/ui/sparkles-text";
 import Link from "next/link";
 import { WaitlistButton } from "@/components/ui/waitlist-button";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -37,11 +39,11 @@ export const HeroSection = () => {
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            {/* <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
+            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
               Get Started
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-            </Button> */}
-            <WaitlistButton />
+            </Button>
+            {/* <WaitlistButton /> */}
           </div>
         </div>
 

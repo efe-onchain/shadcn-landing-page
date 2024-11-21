@@ -11,12 +11,12 @@ import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "essio - AI Search Visibility Platform",
+  title: "ESSIO - AI Search Visibility Platform",
   description: "Track and optimize your brand's visibility across AI-driven search platforms",
   openGraph: {
     type: "website",
-    url: "https://essio.com",
-    title: "essio - AI Search Visibility Platform",
+    url: "https://ESSIO.com",
+    title: "ESSIO - AI Search Visibility Platform",
     description:
       "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
     images: [
@@ -24,14 +24,14 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "essio AI Search Visibility Platform",
+        alt: "ESSIO AI Search Visibility Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@essio",
-    title: "essio - AI Search Visibility Platform",
+    site: "@ESSIO",
+    title: "ESSIO - AI Search Visibility Platform",
     description:
       "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
     images: ["/og-image.jpg"],

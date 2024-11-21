@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "essio",
+  title: "ESSIO",
   description: "Your brand, front and center in every AI conversation",
 };
 

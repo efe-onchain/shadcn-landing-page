@@ -13,7 +13,7 @@ export const FooterSection = () => {
               <Circle className="size-10 mr-2 bg-primary">
                 <p className="text-3xl font-bold text-white">V</p>
               </Circle>
-              <h3 className="text-3xl">essio</h3>
+              <h3 className="text-3xl">ESSIO</h3>
             </Link>
           </div>
 
@@ -62,7 +62,7 @@ export const FooterSection = () => {
 
         <Separator className="my-6" />
         <section className="">
-          <h3 className="">&copy; 2024 essio. All rights reserved.</h3>
+          <h3 className="">&copy; 2024 ESSIO. All rights reserved.</h3>
         </section>
       </div>
     </footer>

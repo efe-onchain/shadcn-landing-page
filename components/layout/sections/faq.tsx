@@ -8,9 +8,9 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "What services does essio provide?",
+    question: "What services does ESSIO provide?",
     answer:
-      "essio specializes in tracking your brand's visibility on AI-driven search platforms, ensuring you connect with the right audience.",
+      "ESSIO specializes in tracking your brand's visibility on AI-driven search platforms, ensuring you connect with the right audience.",
     value: "item-1",
   },
   {
@@ -21,17 +21,17 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "What insights can I gain about my products?",
-    answer: "essio provides actionable insights to enhance your products' discoverability across AI search platforms.",
+    answer: "ESSIO provides actionable insights to enhance your products' discoverability across AI search platforms.",
     value: "item-3",
   },
   {
-    question: "How does essio optimize content strategy?",
+    question: "How does ESSIO optimize content strategy?",
     answer: "We analyze AI search trends to help you create content that resonates with your audience.",
     value: "item-4",
   },
   {
-    question: "What are the benefits of using essio?",
-    answer: "essio enhances your brand's visibility and connects you with the right audience on AI-driven platforms.",
+    question: "What are the benefits of using ESSIO?",
+    answer: "ESSIO enhances your brand's visibility and connects you with the right audience on AI-driven platforms.",
     value: "item-5",
   },
 ];
