@@ -11,12 +11,12 @@ import { SponsorsSection } from "@/components/layout/sections/sponsors";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
 
 export const metadata = {
-  title: "Velori - AI Search Visibility Platform",
+  title: "Essio - AI Search Visibility Platform",
   description: "Track and optimize your brand's visibility across AI-driven search platforms",
   openGraph: {
     type: "website",
-    url: "https://velori.com",
-    title: "Velori - AI Search Visibility Platform",
+    url: "https://Essio.com",
+    title: "Essio - AI Search Visibility Platform",
     description:
       "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
     images: [
@@ -24,14 +24,14 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Velori AI Search Visibility Platform",
+        alt: "Essio AI Search Visibility Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@velori",
-    title: "Velori - AI Search Visibility Platform",
+    site: "@Essio",
+    title: "Essio - AI Search Visibility Platform",
     description:
       "Monitor and enhance your brand's presence across AI search platforms. Get actionable insights to improve visibility and drive more traffic.",
     images: ["/og-image.jpg"],

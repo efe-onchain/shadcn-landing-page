@@ -69,7 +69,7 @@ export const Navbar = () => {
         <Circle className="size-10 mr-2 bg-primary">
           <p className="text-3xl font-bold text-white">V</p>
         </Circle>
-        Velori
+        Essio
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
@@ -87,9 +87,9 @@ export const Navbar = () => {
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
                     <Circle className="size-10 mr-2 bg-primary">
-                      <p className="text-3xl font-bold text-white">V</p>
+                      <p className="text-3xl font-bold text-white">E</p>
                     </Circle>
-                    Velori
+                    Essio
                   </Link>
                 </SheetTitle>
               </SheetHeader>

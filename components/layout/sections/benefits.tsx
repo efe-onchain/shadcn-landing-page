@@ -44,8 +44,8 @@ export const BenefitsSection = () => {
           <h2 className="text-lg text-primary mb-2 tracking-wider">Tracking</h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4"> How Does AI Talk About Your Brand?</h2>
           <p className="text-muted-foreground mb-2">
-            Velori tracks your visibility on AI-driven search platforms, ensuring your brand and products reach the
-            right audience.
+            Essio tracks your visibility on AI-driven search platforms, ensuring your brand and products reach the right
+            audience.
           </p>
           <AnimatedBeamMultipleOutputDemo />
         </div>

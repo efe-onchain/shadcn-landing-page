@@ -44,7 +44,7 @@ export const ServicesSection = () => {
         {`Enhance Your Brand's Visibility`}
       </h2>
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        {`Velori improves your brand's and products' visibility on AI-driven search platforms. We ensure that your
+        {`Essio improves your brand's and products' visibility on AI-driven search platforms. We ensure that your
         offerings are displayed, connecting you with the right audience and maximizing your reach.`}
       </h3>
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16">

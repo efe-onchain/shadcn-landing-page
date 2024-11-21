@@ -1,14 +1,11 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { BorderBeam } from "@/components/ui/border-beam";
 import Particles from "@/components/ui/particles";
 import { ShinyBadge } from "@/components/ui/shiny-badge";
 import SparklesText from "@/components/ui/sparkles-text";
 import Link from "next/link";
+import { WaitlistButton } from "@/components/ui/waitlist-button";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -40,10 +37,11 @@ export const HeroSection = () => {
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
+            {/* <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
               Get Started
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-            </Button>
+            </Button> */}
+            <WaitlistButton />
           </div>
         </div>
 
