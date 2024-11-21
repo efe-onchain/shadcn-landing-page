@@ -5,7 +5,7 @@ export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[450px] w-full flex-col items-center justify-center overflow-hidden  bg-background">
       <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-primary to-gray-100 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-primary">
-        Essio
+        essio
       </span>
 
       {/* Inner Circles */}

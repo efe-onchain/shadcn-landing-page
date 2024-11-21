@@ -67,9 +67,9 @@ export const Navbar = () => {
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
         <Circle className="size-10 mr-2 bg-primary">
-          <p className="text-3xl font-bold text-white">V</p>
+          <p className="text-3xl font-bold text-white">E</p>
         </Circle>
-        Essio
+        essio
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
@@ -89,7 +89,7 @@ export const Navbar = () => {
                     <Circle className="size-10 mr-2 bg-primary">
                       <p className="text-3xl font-bold text-white">E</p>
                     </Circle>
-                    Essio
+                    essio
                   </Link>
                 </SheetTitle>
               </SheetHeader>
