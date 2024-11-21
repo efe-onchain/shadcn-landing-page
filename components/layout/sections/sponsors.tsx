@@ -13,7 +13,7 @@ interface sponsorsProps {
 const sponsors: sponsorsProps[] = [
   {
     icon: "claude",
-    name: "Anthropic",
+    name: "Claude",
   },
   {
     icon: "perplexity",
