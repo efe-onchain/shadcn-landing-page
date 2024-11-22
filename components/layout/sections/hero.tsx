@@ -57,7 +57,10 @@ export const HeroSection = () => {
             src={"/hero-image-dark.webp"}
             alt="essio AI Brand Visibility Platform Dashboard"
             priority
-            unoptimized
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j..."
+            loading="eager"
           />
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </div>

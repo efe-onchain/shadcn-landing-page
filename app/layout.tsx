@@ -97,6 +97,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
+        <link rel="preload" href="/hero-image-dark.webp" as="image" type="image/webp" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
