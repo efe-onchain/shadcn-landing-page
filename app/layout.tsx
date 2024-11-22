@@ -59,7 +59,31 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
     yandex: "your-yandex-verification-code",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "ESSIO - AI Brand Visibility Platform",
+    description: "Track and optimize your brand's visibility across AI search platforms.",
+    creator: "@essio",
+    images: ["/og-image.jpg"],
+  },
 };
+
+function addWebsiteJsonLd() {
+  return {
+    __html: `{
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ESSIO",
+      "url": "https://essio.ai",
+      "logo": "https://essio.ai/og-image.jpg",
+      "description": "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini.",
+      "sameAs": [
+        "https://twitter.com/essio",
+        "https://linkedin.com/company/essio"
+      ]
+    }`,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -72,6 +96,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>

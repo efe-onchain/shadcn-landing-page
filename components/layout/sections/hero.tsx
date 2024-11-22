@@ -53,8 +53,8 @@ export const HeroSection = () => {
           <Image
             width={1200}
             height={1200}
-            className="w-full mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary border-t-primary/30"
-            src={theme === "light" ? "/hero-image-light.png" : "/hero-image-dark.png"}
+            className="w-full mx-auto rounded-lg relative leading-none flex items-center border border-t-2 border-secondary border-t-primary/30"
+            src={"/hero-image-dark.webp"}
             alt="essio AI Brand Visibility Platform Dashboard"
             priority
             unoptimized
