@@ -85,6 +85,23 @@ function addWebsiteJsonLd() {
   };
 }
 
+function addBlogJsonLd() {
+  return {
+    __html: `{
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ESSIO Blog",
+      "url": "https://essio.ai/blog",
+      "description": "Explore insights and strategies for optimizing brand visibility across AI search platforms.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://essio.ai/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }`,
+  };
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -97,6 +114,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={addBlogJsonLd()} key="blog-jsonld" />
         <link rel="preload" href="/hero-image-dark.webp" as="image" type="image/webp" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>

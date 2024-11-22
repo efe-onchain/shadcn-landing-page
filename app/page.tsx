@@ -1,4 +1,5 @@
 import { BenefitsSection } from "@/components/layout/sections/benefits";
+import { BlogSection } from "@/components/layout/sections/blog";
 import { ContactSection } from "@/components/layout/sections/contact";
 import { FAQSection } from "@/components/layout/sections/faq";
 import { FeaturesSection } from "@/components/layout/sections/features";
@@ -20,6 +21,7 @@ export default function Home() {
       <ServicesSection />
       <FeaturesSection />
       <ContactSection />
+      <BlogSection />
       <FAQSection />
       <FooterSection />
     </main>
