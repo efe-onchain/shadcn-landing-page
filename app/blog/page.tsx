@@ -58,7 +58,7 @@ export default function BlogPage() {
         <h2 className="text-lg text-primary mb-2 tracking-wider">Our Blog</h2>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Latest Insights & Trends</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Discover strategies and insights for optimizing your brand's visibility across AI search platforms.
+          {`Discover strategies and insights for optimizing your brand's visibility across AI search platforms.`}
         </p>
       </div>
 
