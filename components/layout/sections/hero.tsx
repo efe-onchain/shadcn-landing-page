@@ -22,28 +22,29 @@ export const HeroSection = () => {
       />
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-12 md:py-24">
         <div className="text-center space-y-8">
-          <Link href="/#benefits">
+          <Link href="/#benefits" aria-label="View benefits">
             <ShinyBadge />
           </Link>
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
+          <h1 className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <div className="flex items-center justify-center">
-              <p>Own the</p>
-
+              <span>Own the</span>
               <SparklesText text="Spotlight" className="ml-4 text-primary text-4xl md:text-6xl" />
             </div>
-            <p>in Every AI Search</p>
-          </div>
+            <span>in Every AI Search</span>
+          </h1>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`Connect with customers who are using AI to discover brands like yours.`}
+            Connect with customers who are using AI to discover brands like yours.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
               Get Started
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              <ArrowRight
+                className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
+                aria-hidden="true"
+              />
             </Button>
-            {/* <WaitlistButton /> */}
           </div>
         </div>
 
@@ -52,12 +53,12 @@ export const HeroSection = () => {
           <Image
             width={1200}
             height={1200}
-            className="w-full  mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30"
+            className="w-full mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary border-t-primary/30"
             src={theme === "light" ? "/hero-image-light.png" : "/hero-image-dark.png"}
-            alt="dashboard"
+            alt="essio AI Brand Visibility Platform Dashboard"
+            priority
             unoptimized
           />
-
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </div>
       </div>

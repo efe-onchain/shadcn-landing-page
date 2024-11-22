@@ -30,7 +30,7 @@ export function WaitlistButton() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
+      <DialogTrigger>
         <Button variant="secondary" className="w-5/6 md:w-1/4 font-bold group/arrow">
           Get Started
           <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
