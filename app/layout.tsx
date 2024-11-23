@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
-
+import { Analytics } from "@vercel/analytics/react";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
