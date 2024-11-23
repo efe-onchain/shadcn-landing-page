@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 import Head from "next/head";
+import Script from "next/script";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
@@ -114,7 +115,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="OAI-SearchBot" content="index,follow" />
-        <script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e"></script>
+        <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
         <meta name="PerplexityBot" content="index,follow" />
       </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
