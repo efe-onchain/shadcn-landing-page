@@ -109,14 +109,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="OAI-SearchBot" content="index,follow" />
         <script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e"></script>
         <meta name="PerplexityBot" content="index,follow" />
-      </Head>
+      </head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addBlogJsonLd()} key="blog-jsonld" />

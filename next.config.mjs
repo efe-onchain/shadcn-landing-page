@@ -41,10 +41,6 @@ const nextConfig = {
       },
     ];
   },
-
-  analytics: {
-    vercelAnalytics: true,
-  },
 };
 
 export default nextConfig;
