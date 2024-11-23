@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
-import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
@@ -109,6 +109,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="OAI-SearchBot" content="index,follow" />
+        <script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e"></script>
+        <meta name="PerplexityBot" content="index,follow" />
+      </Head>
       <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addBlogJsonLd()} key="blog-jsonld" />
@@ -116,7 +124,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}
-          <Analytics />
         </ThemeProvider>
         <Toaster />
       </body>
