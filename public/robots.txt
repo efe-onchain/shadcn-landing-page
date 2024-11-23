@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
-Sitemap: https://essio.ai/sitemap.xml 
+
+User-agent: OAI-SearchBot
+Allow: /
+Sitemap: https://essio.ai/sitemap.xml
+
+# OpenAI SearchBot IP ranges
+# Updated: 2024-09-19
+# IPv4 Ranges:
+# 20.42.10.176/28
+# 172.203.190.128/28
+# 51.8.102.0/24 

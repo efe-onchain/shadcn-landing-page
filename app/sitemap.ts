@@ -1,3 +1,4 @@
+import { latestPosts } from "@/components/layout/sections/blog";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,7 +9,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
-    // Add more URLs as needed
+    {
+      url: "https://essio.ai/blog",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    // Add all your blog posts
+    ...latestPosts.map((post) => ({
+      url: `https://essio.ai/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
   ];
 }
 

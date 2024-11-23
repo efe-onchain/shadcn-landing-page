@@ -20,6 +20,27 @@ const nextConfig = {
       },
     ],
   },
+
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "header",
+            key: "user-agent",
+            value: ".*(OAI-SearchBot|PerplexityBot).*",
+          },
+        ],
+        headers: [
+          {
+            key: "X-Robot-Tag",
+            value: "index,follow",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

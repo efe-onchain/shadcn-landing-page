@@ -109,15 +109,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addBlogJsonLd()} key="blog-jsonld" />
         <link rel="preload" href="/hero-image-dark.webp" as="image" type="image/webp" />
-      </head>
-      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           {children}

@@ -41,11 +41,11 @@ const routeList: RouteProps[] = [
     label: "Blog",
   },
   {
-    href: "#contact",
+    href: "/#contact",
     label: "Contact",
   },
   {
-    href: "#faq",
+    href: "/#faq",
     label: "FAQ",
   },
 ];
