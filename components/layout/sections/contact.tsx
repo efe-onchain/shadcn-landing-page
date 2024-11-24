@@ -58,30 +58,10 @@ export const ContactSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Card className="bg-muted/60">
               <CardContent className="flex items-center space-x-4 p-6">
-                <Building2 className="h-10 w-10 text-primary" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Find us</h3>
-                  <p className="text-sm text-muted-foreground">Address, city, country</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-muted/60">
-              <CardContent className="flex items-center space-x-4 p-6">
-                <Phone className="h-10 w-10 text-primary" />
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Call us</h3>
-                  <p className="text-sm text-muted-foreground">+1 (234) 567-8910</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-muted/60">
-              <CardContent className="flex items-center space-x-4 p-6">
                 <Mail className="h-10 w-10 text-primary" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Mail us</h3>
-                  <p className="text-sm text-muted-foreground">email@example.com</p>
+                  <h3 className="font-semibold text-lg mb-1">Send us an email</h3>
+                  <p className="text-sm text-muted-foreground">hello@essio.ai</p>
                 </div>
               </CardContent>
             </Card>

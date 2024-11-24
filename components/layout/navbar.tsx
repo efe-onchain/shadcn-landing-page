@@ -36,32 +36,39 @@ const routeList: RouteProps[] = [
   //   href: "#team",
   //   label: "Team",
   // },
+
   {
-    href: "/blog",
-    label: "Blog",
+    href: "/#benefits",
+    label: "Features",
   },
   {
     href: "/#contact",
     label: "Contact",
   },
   {
+    href: "/blog",
+    label: "Blog",
+  },
+  {
     href: "/#faq",
     label: "FAQ",
   },
 ];
-
 const featureList: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
+    title: "Track Your Brand's Visibility",
+    description:
+      "Monitor your visibility on AI-driven search platforms to ensure your brand is seen by a broader and more relevant audience.",
   },
   {
-    title: "Build Trust",
-    description: "Leverages social proof elements to establish trust and credibility.",
+    title: "Monitor Product Performance",
+    description:
+      "Learn how your products are performing on AI-driven search platforms to optimize your marketing strategy.",
   },
   {
-    title: "Capture Leads",
-    description: "Make your lead capture form visually appealing and strategically.",
+    title: "Discover AI-Favored Sources",
+    description:
+      "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
   },
 ];
 
@@ -125,7 +132,7 @@ export const Navbar = () => {
       {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">Features</NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="grid w-[600px] grid-cols-2 gap-5 p-4">
@@ -146,7 +153,7 @@ export const Navbar = () => {
                 </ul>
               </div>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (

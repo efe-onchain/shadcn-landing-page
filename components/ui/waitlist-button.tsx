@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Link } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -30,8 +30,12 @@ export function WaitlistButton() {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger>
-        <Button variant="secondary" className="w-5/6 md:w-1/4 font-bold group/arrow">
+      <DialogTrigger asChild>
+        <Button
+          variant="secondary"
+          className="w-5/6 md:w-1/4 font-bold group/arrow"
+          onClick={() => (window.location.href = "/#contact")}
+        >
           Get Started
           <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
         </Button>

@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import AnimatedShinyText from "./animated-shiny-text";
 import { cn } from "@/lib/utils";
+import { Badge } from "./badge";
 
 export function ShinyBadge() {
   return (
