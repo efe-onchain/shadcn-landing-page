@@ -12,7 +12,7 @@ import { ArrowRight } from "lucide-react";
 export const HeroSection = () => {
   const { theme } = useTheme();
   return (
-    <section className="container w-full">
+    <section className="container w-full pt-12 md:pt-0">
       <Particles
         className="absolute inset-0"
         quantity={100}
