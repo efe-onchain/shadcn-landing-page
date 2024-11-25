@@ -50,7 +50,7 @@ export const BenefitsSection = () => {
           <AnimatedBeamMultipleOutputDemo />
         </div>
         <div>
-          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover" controls>
+          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover" controls={false}>
             <source src="/chatgpt.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
