@@ -62,7 +62,7 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="size-16 bg-primary">
-            <p className="text-5xl font-bold text-white">V</p>
+            <p className="text-xl font-bold text-white">ESSIO</p>
           </Circle>
         </div>
         <div className="flex flex-col justify-center">

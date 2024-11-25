@@ -41,13 +41,12 @@ export const BenefitsSection = () => {
   return (
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-20">
-        <div className="w-full flex flex-col justify-start items-start">
+        <div className="w-full flex flex-col justify-center items-start">
           <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI SEO?</h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4"> On the Verge of a Paradigm Shift</h2>
           <p className="text-muted-foreground mb-2">
             {`Stay ahead of the curve as the shift from "searching" to "asking" transforms search engines.`}
           </p>
-          <AnimatedBeamMultipleOutputDemo />
         </div>
         <div>
           <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover" controls={false}>
