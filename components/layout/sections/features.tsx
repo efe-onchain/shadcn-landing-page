@@ -84,7 +84,7 @@ export const FeaturesSection = () => {
         </h3>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featureList.map(({ icon, title, description }) => (
+          {/* {featureList.map(({ icon, title, description }) => (
             <div key={title}>
               <Card className="h-full bg-background border-0 shadow-none">
                 <CardHeader className="flex justify-center items-center">
@@ -103,7 +103,7 @@ export const FeaturesSection = () => {
                 <CardContent className="text-muted-foreground text-center">{description}</CardContent>
               </Card>
             </div>
-          ))}
+          ))} */}
         </div>
       </section>
     </>
