@@ -41,15 +41,15 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-20">
         <div className="w-full flex flex-col justify-start items-start">
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Tracking</h2>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4"> How Does AI Talk About Your Brand?</h2>
+          <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI SEO?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"> On the Verge of a Paradigm Shift</h2>
           <p className="text-muted-foreground mb-2">
-            ESSIO tracks your visibility on AI-driven search platforms, ensuring your brand and products reach the right
-            audience.
+            Stay ahead of the curve as the shift from "searching" to "asking" transforms search engines.
           </p>
           <AnimatedBeamMultipleOutputDemo />
         </div>
-        <div className="grid lg:grid-cols-2 gap-4 w-full">
+        <div></div>
+        {/* <div className="grid lg:grid-cols-2 gap-4 w-full">
           {benefitList.map(({ icon, title, description }, index) => (
             <Card
               key={title}
@@ -74,7 +74,7 @@ export const BenefitsSection = () => {
               <CardContent className="text-muted-foreground">{description}</CardContent>
             </Card>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

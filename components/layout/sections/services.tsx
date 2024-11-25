@@ -38,18 +38,17 @@ const serviceList: ServiceProps[] = [
 export const ServicesSection = () => {
   return (
     <section id="services" className="container py-24 sm:py-32">
-      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Optimization</h2>
+      <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Tracking</h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4 text-gradient bg-clip-text bg-gradient-to-r from-primary to-secondary">
-        {`Enhance Your Brand's Visibility`}
+        {`Understand How AI is Talking About Your Brand`}
       </h2>
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        {`ESSIO improves your brand's and products' visibility on AI-driven search platforms. We ensure that your
-        offerings are displayed, connecting you with the right audience and maximizing your reach.`}
+        {`Essio empowers you to understand how AI search engines represent your brand. Access data-backed actionable insights, drive meaningful impact, and capture the spotlight.`}
       </h3>
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="grid sm:grid-cols-2 gap-4 w-full mx-auto">
-          {serviceList.map(({ title, description, pro }) => (
+          {/* {serviceList.map(({ title, description, pro }) => (
             <Card key={title} className="bg-muted/60 dark:bg-card h-full relative">
               <CardHeader>
                 <CardTitle>{title}</CardTitle>
@@ -63,7 +62,7 @@ export const ServicesSection = () => {
                 BETA
               </Badge>
             </Card>
-          ))}
+          ))} */}
         </div>
 
         <div className="flex justify-center items-center">

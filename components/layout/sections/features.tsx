@@ -75,13 +75,12 @@ export const FeaturesSection = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={addFaqJsonLd()} key="feature-jsonld" />
 
       <section id="features" className="container py-24 sm:py-32">
-        <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Features</h2>
+        <h2 className="text-lg text-primary text-center mb-2 tracking-wider">Optimize</h2>
 
-        <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">The Next-Generation of SEO</h2>
+        <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">Reach Beyond the Traditional Landscape</h2>
 
         <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-          Discover how our innovative features can enhance your visibility and performance on AI-driven search
-          platforms.
+          Pinpoint opportunities and optimize with expertise
         </h3>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

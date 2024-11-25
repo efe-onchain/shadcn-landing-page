@@ -37,10 +37,10 @@ export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="max-w-[75%] mx-auto pb-24 sm:pb-32">
       <h2 className="text-lg text-primary mb-2 tracking-wider text-center">Powered By</h2>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Our Data Sources</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center"> Leading AI Search Engines</h2>
       <p className="text-muted-foreground mb-2 text-center w-[70%] mx-auto">
-        We leverage a variety of AI-driven platforms to ensure your brand and products achieve maximum visibility and
-        reach the right audience.
+        We harness the most popular AI platforms to elevate your brand's visibility and engage the right audience with
+        precision
       </p>
       <div className="mx-auto pt-8">
         <Marquee className="gap-[3rem]" fade innerClassName="gap-[3rem]" pauseOnHover>
