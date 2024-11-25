@@ -40,8 +40,10 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="container py-24 sm:py-32">
       <div className="grid md:grid-cols-2 place-items-center lg:gap-20">
-        <AnimatedBeamMultipleOutputDemo />
-        <div className="w-full flex flex-col justify-center items-end text-right">
+        <div className="order-2 md:order-1 w-full">
+          <AnimatedBeamMultipleOutputDemo />
+        </div>
+        <div className="w-full flex flex-col justify-center items-end text-right order-1 md:order-2">
           <h2 className="text-lg text-primary mb-2 tracking-wider">Tracking</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient bg-clip-text bg-gradient-to-r from-primary to-secondary">

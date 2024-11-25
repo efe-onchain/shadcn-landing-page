@@ -49,7 +49,7 @@ export const BenefitsSection = () => {
           </p>
         </div>
         <div>
-          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover" controls={false}>
+          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover rounded-lg" controls={false}>
             <source src="/chatgpt.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
