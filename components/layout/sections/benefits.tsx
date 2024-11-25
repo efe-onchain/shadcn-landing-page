@@ -44,7 +44,7 @@ export const BenefitsSection = () => {
           <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI SEO?</h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4"> On the Verge of a Paradigm Shift</h2>
           <p className="text-muted-foreground mb-2">
-            Stay ahead of the curve as the shift from "searching" to "asking" transforms search engines.
+            {`Stay ahead of the curve as the shift from "searching" to "asking" transforms search engines.`}
           </p>
           <AnimatedBeamMultipleOutputDemo />
         </div>
