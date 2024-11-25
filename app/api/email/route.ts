@@ -11,12 +11,53 @@ export async function POST(request: Request) {
       from: "Inbound Lead <hello@essio.ai>",
       to: ["hello@essio.ai"],
       subject: `New Inbound Lead: ${subject}`,
-      html: `<p>Message from ${firstName} ${lastName} (${email}):</p><p>${message}</p>`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">New Lead Details</h2>
+          <div style="background: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
+            <p style="margin: 5px 0;"><strong>Name:</strong> ${firstName} ${lastName}</p>
+            <p style="margin: 5px 0;"><strong>Email:</strong> ${email}</p>
+            <p style="margin: 5px 0;"><strong>Subject:</strong> ${subject}</p>
+          </div>
+          <div style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+            <h3 style="color: #555;">Message:</h3>
+            <p style="line-height: 1.6;">${message}</p>
+          </div>
+        </div>
+      `,
     });
-
-    return NextResponse.json({ success: true, message: "Email sent successfully!" });
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error occurred";
     return NextResponse.json({ success: false, message: "Failed to send email.", error: errorMessage });
   }
+
+  try {
+    await resend.emails.send({
+      from: "Essio Onboarding <hello@essio.ai>",
+      to: [email],
+      subject: `Welcome to Essio! We'll be in touch soon`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h1 style="color: #333; text-align: center;">Thank You for Reaching Out!</h1>
+          
+          <div style="background: #f9f9f9; padding: 25px; border-radius: 10px; margin: 20px 0;">
+            <p style="font-size: 16px; line-height: 1.6;">Dear ${firstName},</p>
+            
+            <p style="font-size: 16px; line-height: 1.6;">Thank you for contacting Essio. We've received your message and our team will review it shortly.</p>
+            
+            <p style="font-size: 16px; line-height: 1.6;">We typically respond within 24-48 business hours. In the meantime, you can learn more about how we help brands optimize their visibility across AI platforms on our website.</p>
+          </div>
+          
+          <div style="text-align: center; margin-top: 30px;">
+            <p style="color: #666; font-size: 14px;">Best regards,<br>The Essio Team</p>
+          </div>
+        </div>
+      `,
+    });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error occurred";
+    return NextResponse.json({ success: false, message: "Failed to send email.", error: errorMessage });
+  }
+
+  return NextResponse.json({ success: true });
 }
