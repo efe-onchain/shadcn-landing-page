@@ -20,7 +20,7 @@ export const HeroSection = () => {
         color={theme === "light" ? "#000" : "#fff"}
         refresh
       />
-      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-12 md:py-24">
+      <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-12W md:py-24">
         <div className="text-center space-y-8">
           <Link href="/#benefits" aria-label="View benefits">
             <ShinyBadge />

@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/feed-sources";
 import { Icon } from "@/components/ui/icon";
+import Iphone15Pro from "@/components/ui/iphone-15-pro";
 import { icons } from "lucide-react";
 
 interface BenefitsProps {
@@ -48,7 +49,12 @@ export const BenefitsSection = () => {
           </p>
           <AnimatedBeamMultipleOutputDemo />
         </div>
-        <div></div>
+        <div>
+          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover" controls>
+            <source src="/chatgpt.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         {/* <div className="grid lg:grid-cols-2 gap-4 w-full">
           {benefitList.map(({ icon, title, description }, index) => (
             <Card
