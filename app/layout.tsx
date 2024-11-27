@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 import Head from "next/head";
 import Script from "next/script";
+
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
@@ -118,7 +119,7 @@ export default function RootLayout({
         <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
         <meta name="PerplexityBot" content="index,follow" />
       </head>
-      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
+      <body className={cn("min-h-screen bg-background antialiased")}>
         <script type="application/ld+json" dangerouslySetInnerHTML={addWebsiteJsonLd()} key="website-jsonld" />
         <script type="application/ld+json" dangerouslySetInnerHTML={addBlogJsonLd()} key="blog-jsonld" />
         <link rel="preload" href="/hero-image-dark.webp" as="image" type="image/webp" />

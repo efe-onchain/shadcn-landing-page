@@ -14,7 +14,7 @@ interface Item {
 let notifications = [
   {
     name: "Pricing",
-    description: "AI models frequently mention your product as overpriced.",
+    description: "Perplexity frequently mentioned your product as underpriced.",
     time: "recent",
     icon: "/perplexity.svg",
   },
@@ -33,6 +33,12 @@ let notifications = [
   {
     name: "Customer Service",
     description: "Your customer service is heavily disliked on SearchGPT.",
+    time: "2 scans ago",
+    icon: "/openai-2.svg",
+  },
+  {
+    name: "Not Visible on Keyword",
+    description: "Your product is not visible on keyword 'safe suv' on GPT-4o.",
     time: "2 scans ago",
     icon: "/openai-2.svg",
   },

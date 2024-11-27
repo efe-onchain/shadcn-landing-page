@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/feed-sources";
 import { Icon } from "@/components/ui/icon";
 import Iphone15Pro from "@/components/ui/iphone-15-pro";
+import { MagicCard } from "@/components/ui/magic-card";
 import { icons } from "lucide-react";
 
 interface BenefitsProps {
@@ -23,30 +24,42 @@ const benefitList: BenefitsProps[] = [
     description:
       "Learn how your products are performing on AI-driven search platforms to optimize your marketing strategy.",
   },
-  {
-    icon: "Library",
-    title: "Discover AI-Favored Sources",
-    description:
-      "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
-  },
-  {
-    icon: "Lightbulb",
-    title: "Optimize Content Strategy",
-    description:
-      "Gain insights into AI search trends to create content that resonates with your audience and aligns with search algorithms.",
-  },
+  // {
+  //   icon: "Library",
+  //   title: "Discover AI-Favored Sources",
+  //   description:
+  //     "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
+  // },
+  // {
+  //   icon: "Lightbulb",
+  //   title: "Optimize Content Strategy",
+  //   description:
+  //     "Gain insights into AI search trends to create content that resonates with your audience and aligns with search algorithms.",
+  // },
 ];
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="container py-24 sm:py-32">
+    <section id="benefits" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-20">
-        <div className="w-full flex flex-col justify-center items-start">
-          <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI SEO?</h2>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4"> On the Verge of a Paradigm Shift</h2>
-          <p className="text-muted-foreground mb-2">
-            {`Stay ahead of the curve as the shift from "searching" to "asking" transforms search engines.`}
-          </p>
+        <div className="w-full flex flex-col justify-between items-start">
+          <div>
+            <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI Search Optimization?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Navigating the Paradigm Shift in "Search"</h2>
+            <p className="text-muted-foreground mb-2">
+              {`AI Search Optimization is the process of optimizing your content and marketing strategy to be more visible on AI-driven search platforms.`}
+            </p>
+          </div>
+          <div className="flex items-center gap-4 mt-16">
+            <div className="relative">
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+              <div className="absolute -inset-1 bg-primary/50 rounded-full animate-ping [animation-duration:2000ms]"></div>
+            </div>
+            <p className="text-muted-foreground">
+              Stay ahead of the curve as the shift from <strong>&quot;searching&quot;</strong> to{" "}
+              <strong>&quot;asking&quot;</strong> transforms search engines.
+            </p>
+          </div>
         </div>
         <div>
           <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover rounded-lg" controls={false}>
@@ -54,7 +67,7 @@ export const BenefitsSection = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        {/* <div className="grid lg:grid-cols-2 gap-4 w-full">
+        {/* 
           {benefitList.map(({ icon, title, description }, index) => (
             <Card
               key={title}
