@@ -39,7 +39,7 @@ const serviceList: ServiceProps[] = [
 
 export const ServicesSection = () => {
   return (
-    <section id="services" className="container py-24 sm:py-32">
+    <section id="services" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-36">
       <div className="grid md:grid-cols-2 place-items-center lg:gap-20">
         <div className="order-2 md:order-1 w-full">
           <AnimatedListDemo />

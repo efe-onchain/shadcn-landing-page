@@ -73,8 +73,8 @@ export const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="container py-24 sm:py-32">
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="contact" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-36">
+      <section className="grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div>
           <div className="mb-4">
             <h2 className="text-lg text-primary mb-2 tracking-wider">Contact</h2>
@@ -86,7 +86,7 @@ export const ContactSection = () => {
             to reach out to us.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Card className="bg-muted/60">
               <CardContent className="flex items-center space-x-4 p-6">
                 <Mail className="h-10 w-10 text-primary" />
@@ -110,10 +110,10 @@ export const ContactSection = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
 
-        <Card className="bg-muted/60 dark:bg-card">
+        <Card className="bg-muted/60 dark:bg-card w-full">
           <CardHeader className="text-primary text-2xl"> </CardHeader>
           <CardContent>
             <Form {...form}>

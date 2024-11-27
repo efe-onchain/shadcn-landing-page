@@ -116,7 +116,10 @@ export const Notification = ({ name, description, icon, time }: Item) => {
 export function AnimatedListDemo({ className }: { className?: string }) {
   return (
     <div
-      className={cn("relative flex h-[500px] w-full flex-col p-6 overflow-hidden rounded-lg bg-background ", className)}
+      className={cn(
+        "relative flex h-[500px] w-full flex-col items-start p-6 overflow-hidden rounded-lg bg-background ",
+        className
+      )}
     >
       <AnimatedList>
         {" "}

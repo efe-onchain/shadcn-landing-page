@@ -1,10 +1,10 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/feed-sources";
 import { Icon } from "@/components/ui/icon";
 import Iphone15Pro from "@/components/ui/iphone-15-pro";
 import { MagicCard } from "@/components/ui/magic-card";
-import { icons } from "lucide-react";
-
+import { ArrowRight } from "lucide-react";
 interface BenefitsProps {
   icon: string;
   title: string;
@@ -40,8 +40,8 @@ const benefitList: BenefitsProps[] = [
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-32">
-      <div className="grid lg:grid-cols-2 place-items-center lg:gap-20">
+    <section id="benefits" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-36">
+      <div className="grid lg:grid-cols-2 place-items-center lg:gap-16">
         <div className="w-full flex flex-col justify-between items-start">
           <div>
             <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI Search Optimization?</h2>
@@ -62,7 +62,14 @@ export const BenefitsSection = () => {
           </div>
         </div>
         <div>
-          <video autoPlay muted loop playsInline className="h-[650px] w-full object-cover rounded-lg" controls={false}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-[450px] md:h-[650px] w-full object-cover rounded-lg mt-8 md:mt-0"
+            controls={false}
+          >
             <source src="/chatgpt.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
