@@ -34,7 +34,7 @@ export const HeroSection = () => {
           </h1>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            Align your business with the evolving customer journey
+            Align your business with the evolving customer journey in the age of AI.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
