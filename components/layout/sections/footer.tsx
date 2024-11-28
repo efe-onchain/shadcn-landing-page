@@ -10,9 +10,6 @@ export const FooterSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
-              <Circle className="size-10 mr-2 bg-primary">
-                <p className="text-3xl font-bold text-white">V</p>
-              </Circle>
               <h3 className="text-3xl">ESSIO</h3>
             </Link>
           </div>

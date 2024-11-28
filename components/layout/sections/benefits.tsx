@@ -40,7 +40,7 @@ const benefitList: BenefitsProps[] = [
 
 export const BenefitsSection = () => {
   return (
-    <section id="benefits" className="container py-24 sm:py-32 px-4 md:px-8 lg:px-36">
+    <section id="benefits" className="container py-24 sm:py-32 px-8 lg:px-36">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-16">
         <div className="w-full flex flex-col justify-between items-start">
           <div>
