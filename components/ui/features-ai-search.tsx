@@ -34,7 +34,7 @@ export default function AISearchStrategy() {
   return (
     <div className="container mx-auto max-w-5xl px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card key="step-1" className="flex flex-col h-full">
+        <Card key="step-1" className="flex flex-col h-full bg-transparent border-none">
           <CardHeader>
             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
               <SearchIcon className="w-6 h-6 text-primary-foreground" />
@@ -53,7 +53,7 @@ export default function AISearchStrategy() {
             </div>
           </CardContent>
         </Card>
-        <Card key="step-2" className="flex flex-col h-full">
+        <Card key="step-2" className="flex flex-col h-full bg-transparent border-none">
           <CardHeader>
             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
               <WandSparkles className="w-6 h-6 text-primary-foreground" />
@@ -63,7 +63,7 @@ export default function AISearchStrategy() {
               Develop or repurpose content to target the identified keywords and topics.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex justify-end items-end h-full">
             <Button onClick={() => handleDraftWithAI()}>
               Draft with AI <Edit3 className="ml-2 h-4 w-4" />
             </Button>
@@ -72,7 +72,7 @@ export default function AISearchStrategy() {
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-12 md:px-8">
         <div className="flex flex-col justify-center gap-2">
           <CardTitle className="flex items-center gap-2 text-2xl md:text-3xl">
             Own the <SparklesText text="Spotlight" className="text-primary text-2xl md:text-3xl" />
