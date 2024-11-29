@@ -61,13 +61,13 @@ export const BenefitsSection = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center">
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="h-[450px] md:h-[650px] w-full object-cover rounded-lg mt-8 md:mt-0"
+            className="max-w-full max-h-[85vh] object-contain rounded-lg mt-8 md:mt-0"
             controls={false}
           >
             <source src="/chatgpt.mp4" type="video/mp4" />

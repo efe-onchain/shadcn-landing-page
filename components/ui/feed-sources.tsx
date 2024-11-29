@@ -44,7 +44,6 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
         <div className="flex flex-col justify-center items-center">
           <Circle ref={div6Ref} className="size-12 md:size-14 font-bold flex flex-col items-center">
             <UsersIcon className="w-6 h-6 text-primary" />
-            <span className="hidden text-xs text-muted-foreground md:block">Users</span>
           </Circle>
         </div>
         <div className="flex flex-col justify-center gap-2">
@@ -72,11 +71,11 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
       </div>
 
       {/* AnimatedBeams */}
-      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div1Ref} duration={3} />
-      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div2Ref} duration={3} />
-      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div3Ref} duration={3} />
-      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div4Ref} duration={3} />
-      <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div5Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div2Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div4Ref} toRef={div6Ref} duration={3} />
+      <AnimatedBeam containerRef={containerRef} fromRef={div5Ref} toRef={div6Ref} duration={3} />
       <AnimatedBeam containerRef={containerRef} fromRef={div1Ref} toRef={div7Ref} duration={3} />
       <AnimatedBeam containerRef={containerRef} fromRef={div2Ref} toRef={div7Ref} duration={3} />
       <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={div7Ref} duration={3} />

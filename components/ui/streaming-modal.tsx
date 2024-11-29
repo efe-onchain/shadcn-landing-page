@@ -177,9 +177,9 @@ export function StreamingModal({ isOpen, onClose }: StreamingModalProps) {
         }
       }}
     >
-      <DialogContent className="sm:max-w-[800px] h-[600px] flex flex-col border-primary">
+      <DialogContent className="sm:max-w-[800px] max-w-full h-[80vh] flex flex-col  rounded-lg border-none">
         <DialogHeader>
-          <DialogTitle>Environmental Impact and Sustainability Initiatives: Company X</DialogTitle>
+          <DialogTitle className="text-lg">Environmental Impact and Sustainability Initiatives: Company X</DialogTitle>
           <DialogDescription>
             <div className="flex items-center space-x-2 mr-2">
               Using:
@@ -189,7 +189,7 @@ export function StreamingModal({ isOpen, onClose }: StreamingModalProps) {
           </DialogDescription>
         </DialogHeader>
 
-        <div className="overflow-y-auto mt-4 text-muted-foreground">
+        <div className="overflow-y-auto mt-4 text-muted-foreground flex-1">
           <MarkdownRenderer content={streamedContent} />
         </div>
 
