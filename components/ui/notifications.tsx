@@ -79,7 +79,7 @@ notifications = Array.from({ length: 10 }, () => notifications).flat();
 export const Notification = ({ name, description, icon, time }: Item) => {
   return (
     <figure
-      key={name}
+      key={name + time}
       className={cn(
         "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
         // animation styles

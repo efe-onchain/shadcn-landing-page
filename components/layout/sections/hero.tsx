@@ -56,13 +56,14 @@ export const HeroSection = () => {
             width={1200}
             height={1200}
             className="w-full mx-auto rounded-lg relative leading-none flex items-center border border-t-2 border-secondary border-t-primary/30"
-            src={"/hero-image-dark.webp"}
-            alt="essio AI Brand Visibility Platform Dashboard"
+            src={"/hero-image-dark.png"}
+            alt="Essio AI Brand Visibility Platform Dashboard - High Quality Image"
             priority
-            quality={75}
+            quality={100} // Load image in high quality
+            loading="eager"
             placeholder="blur"
             blurDataURL="data:image/jpeg;base64,/9j..."
-            loading="eager"
+            sizes="(max-width: 1200px) 100vw, 1200px" // SEO optimization for responsive images
           />
           <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
         </div>
