@@ -4,20 +4,20 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function POST(request: Request) {
-  const { firstName, lastName, email, subject, message } = await request.json();
+  const { firstName, lastName, email, companySize, message } = await request.json();
 
   try {
     await resend.emails.send({
       from: "Inbound Lead <hello@essio.ai>",
       to: ["hello@essio.ai"],
-      subject: `New Inbound Lead: ${subject}`,
+      subject: `New Inbound Lead: ${firstName} ${lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333;">New Lead Details</h2>
           <div style="background: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
             <p style="margin: 5px 0;"><strong>Name:</strong> ${firstName} ${lastName}</p>
             <p style="margin: 5px 0;"><strong>Email:</strong> ${email}</p>
-            <p style="margin: 5px 0;"><strong>Subject:</strong> ${subject}</p>
+            <p style="margin: 5px 0;"><strong>Company Size:</strong> ${companySize}</p>
           </div>
           <div style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
             <h3 style="color: #555;">Message:</h3>
@@ -35,15 +35,15 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Essio Onboarding <hello@essio.ai>",
       to: [email],
-      subject: `Welcome to Essio! We'll be in touch soon`,
+      subject: `Welcome to Essio! We Are Generating Your Report`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #333; text-align: center;">Thank You for Reaching Out!</h1>
+          <h1 style="color: #333; text-align: center;">Thank you for contacting Essio</h1>
           
           <div style="background: #f9f9f9; padding: 25px; border-radius: 10px; margin: 20px 0;">
             <p style="font-size: 16px; line-height: 1.6;">Dear ${firstName},</p>
             
-            <p style="font-size: 16px; line-height: 1.6;">Thank you for contacting Essio. We've received your message and our team will review it shortly.</p>
+            <p style="font-size: 16px; line-height: 1.6;">Thank you for contacting Essio. We've received your request for a report and our team will get in contact with you shortly.</p>
             
             <p style="font-size: 16px; line-height: 1.6;">We typically respond within 24-48 business hours. In the meantime, you can learn more about how we help brands optimize their visibility across AI platforms on our website.</p>
           </div>

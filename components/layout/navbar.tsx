@@ -67,11 +67,13 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex items-center">
-        ESSIO
-      </Link>
+      <div className="flex-none w-1/3">
+        <Link href="/" className="font-bold text-lg flex items-center">
+          ESSIO
+        </Link>
+      </div>
       {/* <!-- Mobile --> */}
-      <div className="flex items-center lg:hidden">
+      <div className="xs:flex xs:justify-end xs:items-end xs:w-2/3 md:hidden ">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Menu onClick={() => setIsOpen(!isOpen)} className="cursor-pointer lg:hidden" />
@@ -122,19 +124,27 @@ export const Navbar = () => {
       </div>
 
       {/* <!-- Desktop --> */}
-      <NavigationMenu className="hidden lg:block mx-auto">
-        <NavigationMenuList>
-          <NavigationMenuItem>
+      <div className="flex-1 flex justify-center">
+        <NavigationMenu className="hidden lg:block">
+          <NavigationMenuList className="flex">
             {routeList.map(({ href, label }) => (
-              <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
-                  {label}
-                </Link>
-              </NavigationMenuLink>
+              <NavigationMenuItem key={href}>
+                <NavigationMenuLink asChild>
+                  <Link href={href} className="text-base px-2">
+                    {label}
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             ))}
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      <div className="hidden md:flex  md:justify-end md:w-1/3">
+        <Link href="/#contact" aria-label="Get Started">
+          <Button className="font-bold group/arrow bg-primary text-white">Get Started</Button>
+        </Link>
+      </div>
     </header>
   );
 };

@@ -17,7 +17,7 @@ const formSchema = z.object({
   firstName: z.string().min(2).max(255),
   lastName: z.string().min(2).max(255),
   email: z.string().email(),
-  subject: z.string().min(2).max(255),
+  companySize: z.string().min(2).max(255),
   message: z.string(),
 });
 
@@ -30,13 +30,13 @@ export const ContactSection = () => {
       firstName: "",
       lastName: "",
       email: "",
-      subject: "General Inquiry",
+      companySize: "1-10",
       message: "",
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { firstName, lastName, email, subject, message } = values;
+    const { firstName, lastName, email, companySize, message } = values;
 
     try {
       const res = await fetch("/api/email", {
@@ -44,7 +44,7 @@ export const ContactSection = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ firstName, lastName, email, subject, message }),
+        body: JSON.stringify({ firstName, lastName, email, companySize, message }),
       });
 
       const data = await res.json();
@@ -77,13 +77,13 @@ export const ContactSection = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div>
           <div className="mb-4">
-            <h2 className="text-lg text-primary mb-2 tracking-wider">Contact</h2>
+            <h2 className="text-lg text-primary mb-2 tracking-wider">Free Report</h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Get Your Free Report</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
-            We would love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free
-            to reach out to us.
+            Learn how visible your brand is on AI-driven search engines and how to optimize your content for better
+            visibility.
           </p>
 
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -153,9 +153,9 @@ export const ContactSection = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>Work Email</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john@doe.com" {...field} />
+                          <Input type="email" placeholder="john@apple.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -166,22 +166,22 @@ export const ContactSection = () => {
                 <div className="flex flex-col gap-1.5">
                   <FormField
                     control={form.control}
-                    name="subject"
+                    name="companySize"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject</FormLabel>
+                        <FormLabel>Company Size</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a subject" />
+                              <SelectValue placeholder="Select a company size" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="Brand Visibility Tracking">Brand Visibility Tracking</SelectItem>
-                            <SelectItem value="Product Performance Tracking">Product Performance Tracking</SelectItem>
-                            <SelectItem value="AI SEO Consultation">AI SEO Consultation</SelectItem>
-                            <SelectItem value="Content Optimization">Content Optimization</SelectItem>
-                            <SelectItem value="General Inquiry">General Inquiry</SelectItem>
+                            <SelectItem value="1-10">1-10</SelectItem>
+                            <SelectItem value="11-50">11-50</SelectItem>
+                            <SelectItem value="51-200">51-200</SelectItem>
+                            <SelectItem value="201-500">201-500</SelectItem>
+                            <SelectItem value="500+">500+</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -207,7 +207,7 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                <Button className="mt-4">Send message</Button>
+                <Button className="mt-4">Send</Button>
               </form>
             </Form>
           </CardContent>
