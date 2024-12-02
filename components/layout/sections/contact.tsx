@@ -4,7 +4,7 @@ import { Building2, Clock, ExternalLink, Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,17 +12,27 @@ import { Textarea } from "@/components/ui/textarea";
 import LinkedInIcon from "@/components/icons/linkedin-icon";
 import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
+import { Switch } from "@/components/ui/switch";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
   lastName: z.string().min(2).max(255),
   email: z.string().email(),
   companySize: z.string().min(2).max(255),
-  message: z.string(),
+  bookDemo: z.boolean(),
 });
 
 export const ContactSection = () => {
   const { toast } = useToast();
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
+  useEffect(() => {
+    const submitted = localStorage.getItem("formSubmitted");
+    if (submitted) {
+      setHasSubmitted(true);
+    }
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -31,12 +41,21 @@ export const ContactSection = () => {
       lastName: "",
       email: "",
       companySize: "1-10",
-      message: "",
+      bookDemo: true,
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const { firstName, lastName, email, companySize, message } = values;
+    if (hasSubmitted) {
+      toast({
+        title: "Form already submitted",
+        description: "You have already submitted a request. We'll get back to you soon!",
+        variant: "default",
+      });
+      return;
+    }
+
+    const { firstName, lastName, email, companySize, bookDemo } = values;
 
     try {
       const res = await fetch("/api/email", {
@@ -44,12 +63,14 @@ export const ContactSection = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ firstName, lastName, email, companySize, message }),
+        body: JSON.stringify({ firstName, lastName, email, companySize, bookDemo }),
       });
 
       const data = await res.json();
 
       if (data.success) {
+        localStorage.setItem("formSubmitted", "true");
+        setHasSubmitted(true);
         toast({
           title: "Message sent",
           description: "We'll get back to you soon!",
@@ -193,15 +214,18 @@ export const ContactSection = () => {
                 <div className="flex flex-col gap-1.5">
                   <FormField
                     control={form.control}
-                    name="message"
+                    name="bookDemo"
                     render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
+                      <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                        <div className="space-y-0.5">
+                          <FormLabel className="text-base">Book a Demo</FormLabel>
+                          <FormDescription>
+                            Would you like to schedule a product demo with your free report?
+                          </FormDescription>
+                        </div>
                         <FormControl>
-                          <Textarea rows={5} placeholder="Your message..." className="resize-none" {...field} />
+                          <Switch checked={field.value} onCheckedChange={field.onChange} />
                         </FormControl>
-
-                        <FormMessage />
                       </FormItem>
                     )}
                   />

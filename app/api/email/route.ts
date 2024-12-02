@@ -4,7 +4,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function POST(request: Request) {
-  const { firstName, lastName, email, companySize, message } = await request.json();
+  const { firstName, lastName, email, companySize, bookDemo } = await request.json();
 
   try {
     await resend.emails.send({
@@ -20,8 +20,10 @@ export async function POST(request: Request) {
             <p style="margin: 5px 0;"><strong>Company Size:</strong> ${companySize}</p>
           </div>
           <div style="background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
-            <h3 style="color: #555;">Message:</h3>
-            <p style="line-height: 1.6;">${message}</p>
+            <h3 style="color: #555;">Demo Request:</h3>
+            <p style="line-height: 1.6;">${
+              bookDemo ? "Yes, I would like to schedule a product demo." : "No, I do not need a demo."
+            }</p>
           </div>
         </div>
       `,
