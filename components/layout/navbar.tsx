@@ -37,29 +37,8 @@ const routeList: RouteProps[] = [
     label: "Contact",
   },
   {
-    href: "/blog",
-    label: "Blog",
-  },
-  {
     href: "/#faq",
     label: "FAQ",
-  },
-];
-const featureList: FeatureProps[] = [
-  {
-    title: "Track Your Brand's Visibility",
-    description:
-      "Monitor your visibility on AI-driven search platforms to ensure your brand is seen by a broader and more relevant audience.",
-  },
-  {
-    title: "Monitor Product Performance",
-    description:
-      "Learn how your products are performing on AI-driven search platforms to optimize your marketing strategy.",
-  },
-  {
-    title: "Discover AI-Favored Sources",
-    description:
-      "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
   },
 ];
 
