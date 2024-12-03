@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
   if (isOpenAIBot) {
     response.headers.set("X-Robots-Tag", "index,follow");
   }
-
+  logBotVisit(request);
   return response;
 }
 
@@ -37,3 +37,37 @@ export const config = {
     "/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)",
   ],
 };
+
+export async function logBotVisit(request: NextRequest) {
+  const headersList = request.headers;
+  const path = request.nextUrl.pathname;
+  const method = request.method;
+
+  const requestHeaders: Record<string, string> = {};
+  headersList.forEach((value, key) => {
+    requestHeaders[key] = value;
+  });
+
+  try {
+    console.log("Logging visit to DarkVisitors");
+    console.log("path", path);
+    console.log("method", method);
+    console.log("requestHeaders", requestHeaders);
+    fetch("https://api.darkvisitors.com/visits", {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + process.env.DARK_VISITORS_ACCESS_TOKEN!,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        request_path: path,
+        request_method: method,
+        request_headers: requestHeaders,
+      }),
+    });
+  } catch (error) {
+    console.error("Failed to log visit:", error);
+  }
+
+  return NextResponse.next();
+}
