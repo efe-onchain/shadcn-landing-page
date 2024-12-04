@@ -88,6 +88,14 @@ export const Navbar = () => {
 
             <SheetFooter className="flex-col sm:flex-col justify-start items-start">
               <Separator className="mb-2" />
+              <Link
+                href="https://app.essio.ai/auth"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base underline px-2"
+              >
+                Sign In
+              </Link>
               <Link href="/#contact" aria-label="View benefits" className="mt-4">
                 <Button className="font-bold group/arrow bg-primary text-white">
                   Get Started
@@ -119,7 +127,15 @@ export const Navbar = () => {
         </NavigationMenu>
       </div>
 
-      <div className="hidden md:flex  md:justify-end md:w-1/3">
+      <div className="hidden md:flex md:items-center  md:justify-end md:w-1/3">
+        <Link
+          href="https://app.essio.ai/auth"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base underline px-8"
+        >
+          Sign In
+        </Link>
         <Link href="/#contact" aria-label="Get Started">
           <Button className="font-bold group/arrow bg-primary text-white">Get Started</Button>
         </Link>
