@@ -52,7 +52,7 @@ export const Navbar = () => {
         </Link>
       </div>
       {/* <!-- Mobile --> */}
-      <div className="xs:flex xs:justify-end xs:items-end xs:w-2/3 md:hidden ">
+      <div className="max-sm:flex max-sm:justify-end max-sm:items-end max-sm:w-2/3 md:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Menu onClick={() => setIsOpen(!isOpen)} className="cursor-pointer lg:hidden" />

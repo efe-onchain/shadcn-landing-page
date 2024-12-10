@@ -16,7 +16,7 @@ export const FooterSection = () => {
             </Link>
           </div>
 
-          <div className="flex justify-enditems-end gap-4">
+          <div className="hidden md:flex justify-end items-end gap-4">
             <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger asChild>
