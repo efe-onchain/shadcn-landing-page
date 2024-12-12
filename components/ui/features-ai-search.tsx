@@ -58,7 +58,7 @@ export default function AISearchStrategy() {
             <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
               <WandSparkles className="w-6 h-6 text-primary-foreground" />
             </div>
-            <CardTitle className="text-xl mb-2 flex items-center">Create AI SEO Optimized Content</CardTitle>
+            <CardTitle className="text-xl mb-2 flex items-center">Create GEO Optimized Content</CardTitle>
             <CardDescription>
               Develop or repurpose content to target the identified keywords and topics.
             </CardDescription>

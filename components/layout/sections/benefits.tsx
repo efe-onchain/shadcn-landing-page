@@ -44,10 +44,10 @@ export const BenefitsSection = () => {
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-16">
         <div className="w-full flex flex-col justify-between items-start">
           <div>
-            <h2 className="text-lg text-primary mb-2 tracking-wider">What is AI Search Optimization?</h2>
+            <h2 className="text-lg text-primary mb-2 tracking-wider">What is Generative Engine Optimization (GEO)?</h2>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Navigating the Paradigm Shift in &quot;Search&quot;</h2>
             <p className="text-muted-foreground mb-2">
-              {`AI Search Optimization is the process of optimizing your content and marketing strategy to be more visible on AI-driven search platforms.`}
+              {`Generative Engine Optimization (GEO) is the process of optimizing your content and marketing strategy to be more visible on AI-driven search platforms.`}
             </p>
           </div>
           <div className="flex items-center gap-4 mt-16">

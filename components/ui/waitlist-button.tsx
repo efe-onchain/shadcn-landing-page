@@ -21,8 +21,6 @@ export function WaitlistButton() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your backend
-    console.log("Submitted email:", email);
-    // Close the modal after submission
     setIsOpen(false);
     // Reset the email input
     setEmail("");

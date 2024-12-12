@@ -17,9 +17,13 @@ export const metadata: Metadata = {
   description:
     "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini. Get real-time insights and actionable recommendations.",
   keywords: [
+    "GEO",
+    "GEO AI",
+    "Generative Engine Optimization",
+    "ChatGPT SEO",
+    "Gemini SEO",
     "AI SEO",
     "AI search",
-    "ASO",
     "brand visibility",
     "AI search optimization",
     "ChatGPT visibility",

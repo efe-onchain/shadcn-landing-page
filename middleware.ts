@@ -49,10 +49,6 @@ export async function logBotVisit(request: NextRequest) {
   });
 
   try {
-    console.log("path", path);
-    console.log("method", method);
-    console.log("requestHeaders", requestHeaders);
-    console.log("visitor ip", request.ip);
     fetch("https://api.darkvisitors.com/visits", {
       method: "POST",
       headers: {
