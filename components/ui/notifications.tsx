@@ -13,50 +13,50 @@ interface Item {
 
 let notifications = [
   {
-    name: "Pricing",
-    description: "Perplexity frequently mentioned your product as underpriced.",
+    name: "Negative Sentiment: SUV",
+    description: `Perplexity frequently mentioned your "SUV" as overpriced.`,
     time: "recent",
     icon: "/perplexity.svg",
   },
   {
-    name: "Affordability Ranking",
-    description: "Your product is #1 on affordability according to Claude.",
+    name: "Affordable: Car Loan",
+    description: `Your "Car loan service" is #1 on affordability according to Claude.`,
     time: "recent",
     icon: "/claude-ai-icon.svg",
   },
   {
     name: "Impacting Source",
-    description: "example.com is the most impacting source for your brand on Claude.",
+    description: `"example.com" is the most impacting source for your brand on Claude.`,
     time: "2 scans ago",
     icon: "/claude-ai-icon.svg",
   },
   {
-    name: "Customer Service",
+    name: "Customer Service: Poor",
     description: "Your customer service is heavily disliked on SearchGPT.",
     time: "2 scans ago",
     icon: "/openai-2.svg",
   },
   {
-    name: "Not Visible on Keyword",
-    description: "Your product is not visible on keyword 'safe suv' on GPT-4o.",
+    name: `Not Visible: "Safe SUV"`,
+    description: `Your brand is not visible on keyword 'safe suv' on GPT-4o.`,
     time: "2 scans ago",
     icon: "/openai-2.svg",
   },
   {
-    name: "Environmental Impact",
-    description: "Your company has positive sentiment on environmental impact on Perplexity.",
+    name: "Use Keyword: Long Range",
+    description: `Your "Electric SUV" is not visible on keyword 'long range' on Perplexity.`,
     time: "recent",
     icon: "/perplexity.svg",
   },
   {
-    name: "Durability Ranking",
-    description: "Your product is #7 on durability according to Gemini.",
+    name: "Durability: #4 Ranking",
+    description: `Your "SUV" is #4 on durability according to Gemini.`,
     time: "recent",
     icon: "/google-gemini-icon2.svg",
   },
   {
-    name: "Entertainment Systems",
-    description: "Your product is #5 on entertainment systems according to Perplexity.",
+    name: "Entertainment Systems: Slow",
+    description: `Perplexity mentioned your "Sedan Model" as slow on entertainment systems, and recommended your competitor.`,
     time: "recent",
     icon: "/perplexity.svg",
   },
@@ -65,12 +65,6 @@ let notifications = [
     description: "example.com is the most impacting source for your brand on OpenAI.",
     time: "1 scan ago",
     icon: "/openai-2.svg",
-  },
-  {
-    name: "Maintenance",
-    description: "Your product is ranked #3 on maintenance on Perplexity.",
-    time: "1 scan ago",
-    icon: "/google-gemini-icon2.svg",
   },
 ];
 
