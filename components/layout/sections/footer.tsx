@@ -4,6 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 export const FooterSection = () => {
   return (
@@ -12,7 +13,7 @@ export const FooterSection = () => {
         <div className="flex justify-between items-center">
           <div className="col-span-full xl:col-span-2">
             <Link href="#" className="flex font-bold items-center">
-              <h3 className="text-3xl">ESSIO</h3>
+              <Image src="/logo.png" alt="ESSIO" width={160} height={160} />
             </Link>
           </div>
 
