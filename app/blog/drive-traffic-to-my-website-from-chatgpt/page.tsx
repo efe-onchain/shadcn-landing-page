@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function BlogPost() {
   return (
-    <article className=" bg-background select-none">
+    <article className="text-background bg-background select-none">
       <div className="prose prose-lg mx-auto p-8">
         <h1 className="">Drive traffic to my website from ChatGPT</h1>
 
