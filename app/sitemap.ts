@@ -7,19 +7,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://essio.ai",
       lastModified: new Date(),
       changeFrequency: "daily",
-      priority: 1,
+      priority: 0.9,
     },
     {
       url: "https://essio.ai/blog",
       lastModified: new Date(),
       changeFrequency: "daily",
-      priority: 0.9,
+      priority: 0.8,
     },
     ...latestPosts.map((post) => ({
       url: `https://essio.ai/blog/${post.slug}`,
       lastModified: new Date(post.date),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
+      changeFrequency: "daily" as const,
+      priority: 1,
     })),
   ];
 }
