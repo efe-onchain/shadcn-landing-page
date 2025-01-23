@@ -43,7 +43,7 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
       <div className="flex size-full max-w-lg flex-row items-stretch justify-between gap-10">
         <div className="flex flex-col justify-center items-center">
           <Circle ref={div6Ref} className="size-12 md:size-14 font-bold flex flex-col items-center">
-            <UsersIcon className="w-6 h-6 text-primary" />
+            <img src="/logo-black.png" alt="Essio Logo" className="w-fit" />
           </Circle>
         </div>
         <div className="flex flex-col justify-center gap-2">
@@ -65,7 +65,7 @@ export function AnimatedBeamMultipleOutputDemo({ className }: { className?: stri
         </div>
         <div className="flex flex-col justify-center items-center">
           <Circle ref={div7Ref} className="size-12 md:size-14 font-bold flex flex-col items-center text-center">
-            <span className="text-xs text-primary">Your Brand</span>
+            <UsersIcon className="w-6 h-6 text-primary" />
           </Circle>
         </div>
       </div>
