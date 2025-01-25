@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import Image from "next/image";
+import LinkedInIcon, { LinkedInIconBlue } from "@/components/icons/linkedin-icon";
 
 export const FooterSection = () => {
   return (
@@ -99,8 +100,16 @@ export const FooterSection = () => {
         </div>
 
         <Separator className="my-6" />
-        <section className="">
-          <h3 className="">&copy; 2024 ESSIO. All rights reserved.</h3>
+        <section className="flex flex-row items-center justify-between gap-4">
+          <h3 className="text-sm text-muted-foreground">&copy; 2024 ESSIO. All rights reserved.</h3>
+          <Link
+            href="https://linkedin.com/company/essio-ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground"
+          >
+            <LinkedInIconBlue className="h-8 w-8  fill-[#0072b1]" />
+          </Link>
         </section>
       </div>
     </footer>
