@@ -47,7 +47,7 @@ export async function POST(request: Request) {
             
             <p style="font-size: 16px; line-height: 1.6;">Thank you for contacting Essio. We've received your request for a report and our team will get in contact with you shortly.</p>
             
-            <p style="font-size: 16px; line-height: 1.6;">We typically respond within 24-48 business hours. In the meantime, you can book a meeting with our team using the link below:</p>
+            <p style="font-size: 16px; line-height: 1.6;">We typically are ready with your report in 1-2 business days. In the meantime, you can book a meeting with our team using the link below:</p>
 
             <div style="text-align: center; margin: 30px 0;">
               <a href="https://calendar.app.google/KL6gEu9GGsLepgm18" 
