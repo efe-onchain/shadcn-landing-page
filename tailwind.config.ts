@@ -67,6 +67,10 @@ module.exports = {
             height: "var(--radix-accordion-content-height)",
           },
         },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
+        },
         "accordion-up": {
           from: {
             height: "var(--radix-accordion-content-height)",
@@ -134,6 +138,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
+        pulse: "pulse var(--duration) ease-out infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         "shiny-text": "shiny-text 8s infinite",
         orbit: "orbit calc(var(--duration)*1s) linear infinite",

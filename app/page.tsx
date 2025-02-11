@@ -21,7 +21,7 @@ export default async function Home() {
       <BenefitsSection />
       <ServicesSection />
       <FeaturesSection />
-      {/* <PricingSection /> */}
+      <PricingSection />
       <ContactSection />
       {/* <BlogSection /> */}
       <FAQSection />
