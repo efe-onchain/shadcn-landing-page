@@ -24,18 +24,6 @@ const benefitList: BenefitsProps[] = [
     description:
       "Learn how your products are performing on AI-driven search platforms to optimize your marketing strategy.",
   },
-  // {
-  //   icon: "Library",
-  //   title: "Discover AI-Favored Sources",
-  //   description:
-  //     "Discover the sources that AI loves to find your brand and products to optimize your marketing strategy.",
-  // },
-  // {
-  //   icon: "Lightbulb",
-  //   title: "Optimize Content Strategy",
-  //   description:
-  //     "Gain insights into AI search trends to create content that resonates with your audience and aligns with search algorithms.",
-  // },
 ];
 
 export const BenefitsSection = () => {

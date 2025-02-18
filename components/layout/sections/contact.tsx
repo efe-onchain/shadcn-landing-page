@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
 import { Switch } from "@/components/ui/switch";
 import { useEffect, useState } from "react";
+import { GoogleCalendarButton } from "@/components/calendar/google-calendar-button";
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
@@ -98,9 +99,9 @@ export const ContactSection = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div>
           <div className="mb-4">
-            <h2 className="text-lg text-primary mb-2 tracking-wider">Free Report</h2>
+            <h2 className="text-lg text-primary mb-2 tracking-wider">Meet the Team</h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">Get Your Free Report</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Book a Demo</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
             Learn how visible your brand is on AI-driven search engines and how to optimize your content for better
@@ -134,110 +135,11 @@ export const ContactSection = () => {
           </div> */}
         </div>
 
-        <Card className="bg-muted/60 dark:bg-card w-full">
-          <CardHeader className="text-primary text-2xl"> </CardHeader>
-          <CardContent>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="grid w-full gap-4">
-                <div className="flex flex-col md:!flex-row gap-8">
-                  <FormField
-                    control={form.control}
-                    name="firstName"
-                    render={({ field }) => (
-                      <FormItem className="w-full">
-                        <FormLabel>First Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem className="w-full">
-                        <FormLabel>Last Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className="flex flex-col gap-1.5">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Work Email</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="john@apple.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className="flex flex-col gap-1.5">
-                  <FormField
-                    control={form.control}
-                    name="companySize"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Company Size</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select a company size" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="1-10">1-10</SelectItem>
-                            <SelectItem value="11-50">11-50</SelectItem>
-                            <SelectItem value="51-200">51-200</SelectItem>
-                            <SelectItem value="201-500">201-500</SelectItem>
-                            <SelectItem value="500+">500+</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className="flex flex-col gap-1.5">
-                  <FormField
-                    control={form.control}
-                    name="bookDemo"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
-                        <div className="space-y-0.5">
-                          <FormLabel className="text-base">Book a Demo</FormLabel>
-                          <FormDescription>
-                            Would you like to schedule a product demo with your free report?
-                          </FormDescription>
-                        </div>
-                        <FormControl>
-                          <Switch checked={field.value} onCheckedChange={field.onChange} />
-                        </FormControl>
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <Button className="mt-4">Send</Button>
-              </form>
-            </Form>
-          </CardContent>
-
-          <CardFooter></CardFooter>
-        </Card>
+        <div className="w-full bg-no">
+          <div className="flex flex-col justify-center items-center">
+            <GoogleCalendarButton />
+          </div>
+        </div>
       </section>
     </section>
   );
