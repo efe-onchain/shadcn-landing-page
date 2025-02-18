@@ -128,6 +128,34 @@ html {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  .prose h1 {
+    @apply text-4xl font-bold tracking-tight mb-2;
+  }
+  
+  .prose h2 {
+    @apply text-2xl font-semibold mt-12 mb-6;
+  }
+  
+  .prose p {
+    @apply text-base leading-7 mb-6;
+  }
+  
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+  
+  .prose section {
+    @apply mb-16;
+  }
+  
+  .prose ol {
+    @apply space-y-2 mb-12;
+  }
+  
+  .prose address {
+    @apply not-italic text-base leading-7 pl-4 border-l-2 border-muted;
+  }
 }
 
 .shadow-light {

@@ -10,7 +10,7 @@ interface CalendarButtonProps {
 }
 
 const TIMEZONE_URLS = {
-  US: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vD2M-fgHRxfbhhUhg45cLwwJcK7auI9vyx6gNsj2qdouOG-Xk835inMAjUne8hXaTGU5aQDnt?gv=true",
+  US: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1cK5U0XL-ekdwYa3B9xg3sEN6No6SPOTLh1CmNsVAsysOSypKqrpt4o6KUEBpp7JtQTd1jxxzC?gv=true",
   Europe:
     "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1vD2M-fgHRxfbhhUhg45cLwwJcK7auI9vyx6gNsj2qdouOG-Xk835inMAjUne8hXaTGU5aQDnt?timezone=Europe/London&gv=true",
 };
