@@ -99,9 +99,9 @@ export const ContactSection = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 place-items-center">
         <div>
           <div className="mb-4">
-            <h2 className="text-lg text-primary mb-2 tracking-wider">Book a Demo</h2>
+            <h2 className="text-lg text-primary mb-2 tracking-wider">Meet the Team</h2>
 
-            <h2 className="text-3xl md:text-4xl font-bold">Personalized Demo for Your Business</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Book a Demo</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
             Learn how visible your brand is on AI-driven search engines and how to optimize your content for better
