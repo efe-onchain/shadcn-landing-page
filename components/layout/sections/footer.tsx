@@ -97,7 +97,7 @@ export const FooterSection = () => {
               </Link>
             </div>
           </div> */}
-          <h3 className="text-sm text-muted-foreground">&copy; 2024 ESSIO. All rights reserved.</h3>
+          <h3 className="text-sm text-muted-foreground">&copy; 2025 ESSIO. All rights reserved.</h3>
         </div>
 
         <Separator className="my-6" />
