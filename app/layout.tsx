@@ -116,12 +116,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NBBV67PXL5" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-NBBV67PXL5');
+        `}
+        </Script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="msvalidate.01" content="D28219F6475C8E4D68EF02ABF27ADBD5" />
         <meta name="OAI-SearchBot" content="index,follow" />
         <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
+
         <meta name="PerplexityBot" content="index,follow" />
       </head>
       <body className={cn("min-h-screen bg-background antialiased")}>
