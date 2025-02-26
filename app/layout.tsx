@@ -13,7 +13,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://essio.ai"),
-  title: "ESSIO - AI Brand Visibility Platform",
+  title: "ESSIO - AI-Search Analytics Platform",
   description:
     "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini. Get real-time insights and actionable recommendations.",
   keywords: [

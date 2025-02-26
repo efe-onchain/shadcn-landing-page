@@ -2,8 +2,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // Get the user agent
-  logBotVisit(request);
+  // Fire and forget the logging - don't await it
+  logBotVisit(request).catch(console.error);
+  return NextResponse.next();
 }
 
 export const config = {
@@ -21,7 +22,7 @@ export const config = {
   ],
 };
 
-export async function logBotVisit(request: NextRequest) {
+async function logBotVisit(request: NextRequest) {
   const headersList = request.headers;
   const path = request.nextUrl.pathname;
   const method = request.method;
@@ -32,7 +33,7 @@ export async function logBotVisit(request: NextRequest) {
   });
 
   try {
-    fetch("https://api.darkvisitors.com/visits", {
+    await fetch("https://api.darkvisitors.com/visits", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + process.env.DARK_VISITORS_ACCESS_TOKEN!,
@@ -43,10 +44,11 @@ export async function logBotVisit(request: NextRequest) {
         request_method: method,
         request_headers: requestHeaders,
       }),
+      // Add timeout and retry options
+      signal: AbortSignal.timeout(2000), // 2 second timeout
     });
   } catch (error) {
+    // Log the error but don't throw it
     console.error("Failed to log visit:", error);
   }
-
-  return NextResponse.next();
 }
