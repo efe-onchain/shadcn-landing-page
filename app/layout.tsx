@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "essio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og.ong",
         width: 1200,
         height: 630,
         alt: "essio AI Brand Visibility Platform",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "ESSIO - AI Brand Visibility Platform",
     description: "Track and optimize your brand's visibility across AI search platforms.",
     creator: "@essio",
-    images: ["/og-image.jpg"],
+    images: ["/og.png"],
   },
 };
 
@@ -81,7 +81,7 @@ function addWebsiteJsonLd() {
       "@type": "Organization",
       "name": "ESSIO",
       "url": "https://essio.ai",
-      "logo": "https://essio.ai/og-image.jpg",
+      "logo": "https://essio.ai/og.png",
       "description": "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini.",
       "sameAs": [
         "https://twitter.com/essio",
