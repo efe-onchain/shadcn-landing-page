@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 import Head from "next/head";
 import Script from "next/script";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
@@ -116,15 +116,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NBBV67PXL5" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-NBBV67PXL5');
-        `}
-        </Script>
+        <GoogleTagManager gtmId="G-NBBV67PXL5" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
