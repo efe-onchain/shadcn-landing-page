@@ -15,8 +15,9 @@ export const config = {
      * 3. /fonts (inside /public)
      * 4. /examples (inside /public)
      * 5. all root files inside /public (e.g. /favicon.ico)
+     * 6. XML files (e.g. BingSiteAuth.xml)
      */
-    "/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)",
+    "/((?!api|_next|fonts|examples|[\\w-]+\\.xml|[\\w-]+\\.\\w+).*)",
   ],
 };
 

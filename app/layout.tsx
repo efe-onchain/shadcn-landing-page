@@ -119,6 +119,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="msvalidate.01" content="D28219F6475C8E4D68EF02ABF27ADBD5" />
         <meta name="OAI-SearchBot" content="index,follow" />
         <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
         <meta name="PerplexityBot" content="index,follow" />
