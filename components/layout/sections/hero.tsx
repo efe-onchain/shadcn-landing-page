@@ -22,19 +22,16 @@ export const HeroSection = () => {
       />
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-12W md:py-24">
         <div className="text-center space-y-8">
-          <Link href="/#benefits" aria-label="View benefits">
-            <ShinyBadge />
-          </Link>
           <h1 className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <div className="flex items-center justify-center">
               <span>Own the</span>
               <SparklesText text="Spotlight" className="ml-4 text-primary text-4xl md:text-6xl" />
             </div>
-            <span>in Every AI Search</span>
+            <span>in AI-Search</span>
           </h1>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            Align your business with the evolving customer journey in the age of AI.
+            In depth and personalized AI-Search analytics backed by actionable data.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">

@@ -45,7 +45,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
+    <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky  z-40 rounded-2xl flex justify-between items-center p-2 bg-background">
       <div className="flex-none w-1/3">
         <Link href="/" className="font-bold text-lg flex items-center ml-2">
           <Image src="/logo.png" alt="ESSIO" width={120} height={120} />
@@ -92,7 +92,7 @@ export const Navbar = () => {
                 href="https://app.essio.ai/auth"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base underline px-2"
+                className="text-base px-2"
               >
                 Sign In
               </Link>
@@ -128,12 +128,7 @@ export const Navbar = () => {
       </div>
 
       <div className="hidden md:flex md:items-center  md:justify-end md:w-1/3">
-        <Link
-          href="https://app.essio.ai/auth"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-base underline px-8"
-        >
+        <Link href="https://app.essio.ai/auth" target="_blank" rel="noopener noreferrer" className="text-base px-8">
           Sign In
         </Link>
         <Link href="/#contact" aria-label="Get Started">
