@@ -71,22 +71,22 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
 
 const defaultCards = [
   {
-    icon: <img src="/oai.svg" alt="OpenAI" className="inline h-6 w-6 mx-2 rounded-lg" />,
+    icon: <img src="/google-gemini-icon2.svg" alt="Gemini" className="inline h-6 w-6 mx-2 rounded-lg" />,
     title: "Competitors",
     description: `Tracking 50+ competitors`,
     date: "Just now",
     iconClassName: "text-primary",
-    titleClassName: "text-primary/80",
+    titleClassName: "text-gray-200",
     className:
       "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:rounded-xl  before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
   {
-    icon: <img src="/perplexity.svg" alt="OpenAI" className="inline h-6 w-6 mx-2 rounded-lg" />,
+    icon: <img src="/perplexity.svg" alt="Perplexity" className="inline h-6 w-6 mx-2 rounded-lg" />,
     title: "Links",
     description: "g2.com is the most cited source",
     date: "2 days ago",
     iconClassName: "text-primary",
-    titleClassName: "text-primary/80",
+    titleClassName: "text-gray-200",
     className:
       "[grid-area:stack] translate-x-12 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
@@ -96,7 +96,7 @@ const defaultCards = [
     description: `#1 in keyword: "best CRM"`,
     date: "Today",
     iconClassName: "text-primary/70",
-    titleClassName: "text-primary/80",
+    titleClassName: "text-gray-200",
     className: "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
   },
 ];
