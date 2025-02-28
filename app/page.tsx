@@ -5,7 +5,7 @@ import { FAQSection } from "@/components/layout/sections/faq";
 import { FeaturesSection } from "@/components/layout/sections/features";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
-import { PricingSection } from "@/components/layout/sections/pricing";
+import Pricing from "@/components/layout/sections/pricing";
 import { ServicesSection } from "@/components/layout/sections/services";
 import { SponsorsSection } from "@/components/layout/sections/sponsors";
 
@@ -20,8 +20,8 @@ export default async function Home() {
       <SponsorsSection />
       <BenefitsSection />
       <ServicesSection />
-      <FeaturesSection />
-      {/* <PricingSection /> */}
+      {/* <FeaturesSection /> */}
+      <Pricing />
       <ContactSection />
       {/* <BlogSection /> */}
       <FAQSection />

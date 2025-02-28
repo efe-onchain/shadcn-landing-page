@@ -37,6 +37,10 @@ const routeList: RouteProps[] = [
     label: "Contact",
   },
   {
+    href: "/#pricing",
+    label: "Pricing",
+  },
+  {
     href: "/#faq",
     label: "FAQ",
   },
@@ -131,7 +135,7 @@ export const Navbar = () => {
         <Link href="https://app.essio.ai/auth" target="_blank" rel="noopener noreferrer" className="text-base px-8">
           Sign In
         </Link>
-        <Link href="/#contact" aria-label="Get Started">
+        <Link href="/#pricing" aria-label="Get Started">
           <Button className="font-bold group/arrow bg-primary text-white">Get Started</Button>
         </Link>
       </div>

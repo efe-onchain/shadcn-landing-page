@@ -5,7 +5,6 @@ import Particles from "@/components/ui/particles";
 import { ShinyBadge } from "@/components/ui/shiny-badge";
 import SparklesText from "@/components/ui/sparkles-text";
 import Link from "next/link";
-import { WaitlistButton } from "@/components/ui/waitlist-button";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
