@@ -25,7 +25,7 @@ interface UserStatus {
 const PopularPlanBadge = () => (
   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
     <SparklesText
-      className="bg-gradient-to-r from-primary to-primary/80 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg shadow-primary/20 ring-1 ring-primary/50"
+      className="bg-gradient-to-r from-primary to-primary/80 text-white px-4 py-1 rounded-full text-xs md:text-sm font-medium shadow-lg shadow-primary/20 ring-1 ring-primary/50"
       text="MOST POPULAR PLAN"
     />
   </div>
