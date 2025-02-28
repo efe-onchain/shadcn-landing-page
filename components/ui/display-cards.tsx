@@ -25,7 +25,7 @@ function DisplayCard({
   return (
     <div
       className={cn(
-        "relative flex h-36 w-[22rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-0 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2",
+        "relative flex h-36 w-full max-w-[22rem] sm:w-[22rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-0 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[20rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2",
         className
       )}
     >
@@ -33,7 +33,7 @@ function DisplayCard({
         <span className="relative inline-block rounded-full">{icon}</span>
         <p className={cn("text-lg font-medium", titleClassName)}>{title}</p>
       </div>
-      <p className="whitespace-nowrap text-lg">{description}</p>
+      <p className="whitespace-nowrap text-lg text-ellipsis overflow-hidden">{description}</p>
       <p className="text-muted-foreground">{date}</p>
     </div>
   );
@@ -78,7 +78,7 @@ const defaultCards = [
     iconClassName: "text-primary",
     titleClassName: "text-gray-200",
     className:
-      "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:rounded-xl  before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+      "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:rounded-xl before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
   {
     icon: <img src="/perplexity.svg" alt="Perplexity" className="inline h-6 w-6 mx-2 rounded-lg" />,
@@ -88,7 +88,7 @@ const defaultCards = [
     iconClassName: "text-primary",
     titleClassName: "text-gray-200",
     className:
-      "[grid-area:stack] translate-x-12 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+      "[grid-area:stack] md:translate-x-12 translate-x-6 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:rounded-xl before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
   },
   {
     icon: <img src="/oai.svg" alt="OpenAI" className="inline h-6 w-6 mx-2 rounded-lg" />,
@@ -97,14 +97,14 @@ const defaultCards = [
     date: "Today",
     iconClassName: "text-primary/70",
     titleClassName: "text-gray-200",
-    className: "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
+    className: "[grid-area:stack] md:translate-x-24 translate-x-12 translate-y-20 hover:translate-y-10",
   },
 ];
 
 function DisplayCardsDemo() {
   return (
-    <div className="flex min-h-[400px] w-full items-center justify-center py-20">
-      <div className="w-full max-w-3xl">
+    <div className="flex min-h-[400px] w-full items-center justify-center py-20 overflow-hidden">
+      <div className="w-full max-w-3xl px-4">
         <DisplayCards cards={defaultCards} />
       </div>
     </div>
