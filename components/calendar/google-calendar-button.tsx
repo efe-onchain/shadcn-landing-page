@@ -28,11 +28,11 @@ declare global {
 export function GoogleCalendarButton({ color = "#e11d48", label = "Book a Demo" }: CalendarButtonProps) {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const [timezone, setTimezone] = useState<"US" | "Europe">("US");
-  const [key, setKey] = useState(0); // Add a key to force remount
+  const [key, setKey] = useState(0);
 
   const handleTimezoneChange = (value: "US" | "Europe") => {
     setTimezone(value);
-    setKey((prev) => prev + 1); // Increment key to force remount
+    setKey((prev) => prev + 1);
   };
 
   useEffect(() => {
@@ -51,15 +51,13 @@ export function GoogleCalendarButton({ color = "#e11d48", label = "Book a Demo" 
       }
     };
 
+    // Only initialize when the script is loaded
     if (isScriptLoaded) {
       loadCalendarButton();
     }
 
-    window.addEventListener("load", loadCalendarButton);
-
-    return () => {
-      window.removeEventListener("load", loadCalendarButton);
-    };
+    // Remove the window.load event listener
+    // No need for cleanup function since we're not adding event listeners
   }, [color, label, isScriptLoaded, timezone]);
 
   return (

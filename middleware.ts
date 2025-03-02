@@ -2,26 +2,9 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // Get the user agent
-  const userAgent = request.headers.get("user-agent") || "";
-
-  // Check if it's the OpenAI SearchBot
-  const isOpenAIBot = userAgent.includes("OAI-SearchBot");
-
-  // Create the response
-  const response = NextResponse.next();
-
-  // Add security headers
-  response.headers.set("X-Frame-Options", "DENY");
-  response.headers.set("X-Content-Type-Options", "nosniff");
-  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-
-  // Special handling for OpenAI SearchBot
-  if (isOpenAIBot) {
-    response.headers.set("X-Robots-Tag", "index,follow");
-  }
-  logBotVisit(request);
-  return response;
+  // Fire and forget the logging - don't await it
+  logBotVisit(request).catch(console.error);
+  return NextResponse.next();
 }
 
 export const config = {
@@ -33,12 +16,13 @@ export const config = {
      * 3. /fonts (inside /public)
      * 4. /examples (inside /public)
      * 5. all root files inside /public (e.g. /favicon.ico)
+     * 6. XML files (e.g. BingSiteAuth.xml)
      */
-    "/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)",
+    "/((?!api|_next|fonts|examples|[\\w-]+\\.xml|[\\w-]+\\.\\w+).*)",
   ],
 };
 
-export async function logBotVisit(request: NextRequest) {
+async function logBotVisit(request: NextRequest) {
   const headersList = request.headers;
   const path = request.nextUrl.pathname;
   const method = request.method;
@@ -49,7 +33,7 @@ export async function logBotVisit(request: NextRequest) {
   });
 
   try {
-    fetch("https://api.darkvisitors.com/visits", {
+    await fetch("https://api.darkvisitors.com/visits", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + process.env.DARK_VISITORS_ACCESS_TOKEN!,
@@ -60,10 +44,11 @@ export async function logBotVisit(request: NextRequest) {
         request_method: method,
         request_headers: requestHeaders,
       }),
+      // Add timeout and retry options
+      signal: AbortSignal.timeout(2000), // 2 second timeout
     });
   } catch (error) {
+    // Log the error but don't throw it
     console.error("Failed to log visit:", error);
   }
-
-  return NextResponse.next();
 }

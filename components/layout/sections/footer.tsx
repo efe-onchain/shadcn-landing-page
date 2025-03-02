@@ -97,11 +97,19 @@ export const FooterSection = () => {
               </Link>
             </div>
           </div> */}
+          <h3 className="text-sm text-muted-foreground">&copy; 2025 ESSIO. All rights reserved.</h3>
         </div>
 
         <Separator className="my-6" />
         <section className="flex flex-row items-center justify-between gap-4">
-          <h3 className="text-sm text-muted-foreground">&copy; 2024 ESSIO. All rights reserved.</h3>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="sm:text-xs md:text-sm text-muted-foreground hover:text-foreground">
+              Privacy Policy
+            </Link>
+            <Link href="/toc" className="sm:text-xs md:text-sm text-muted-foreground hover:text-foreground">
+              Terms of Service
+            </Link>
+          </div>
           <Link
             href="https://linkedin.com/company/essio-ai"
             target="_blank"

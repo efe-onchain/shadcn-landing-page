@@ -7,13 +7,13 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 import Head from "next/head";
 import Script from "next/script";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://essio.ai"),
-  title: "ESSIO - AI Brand Visibility Platform",
+  title: "ESSIO | AI-Search Analytics Platform",
   description:
     "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini. Get real-time insights and actionable recommendations.",
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "essio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og.ong",
         width: 1200,
         height: 630,
         alt: "essio AI Brand Visibility Platform",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "ESSIO - AI Brand Visibility Platform",
     description: "Track and optimize your brand's visibility across AI search platforms.",
     creator: "@essio",
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image.png"],
   },
 };
 
@@ -81,7 +81,7 @@ function addWebsiteJsonLd() {
       "@type": "Organization",
       "name": "ESSIO",
       "url": "https://essio.ai",
-      "logo": "https://essio.ai/og-image.jpg",
+      "logo": "https://essio.ai/opengraph-image.png",
       "description": "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini.",
       "sameAs": [
         "https://twitter.com/essio",
@@ -116,11 +116,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <GoogleTagManager gtmId="G-NBBV67PXL5" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="msvalidate.01" content="D28219F6475C8E4D68EF02ABF27ADBD5" />
         <meta name="OAI-SearchBot" content="index,follow" />
         <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
+
         <meta name="PerplexityBot" content="index,follow" />
       </head>
       <body className={cn("min-h-screen bg-background antialiased")}>

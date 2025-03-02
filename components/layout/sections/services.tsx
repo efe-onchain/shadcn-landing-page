@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import DisplayCards, { DisplayCardsDemo } from "@/components/ui/display-cards";
 import { AnimatedBeamMultipleOutputDemo } from "@/components/ui/feed-sources";
 import { AnimatedListDemo, Notification } from "@/components/ui/notifications";
 import { OrbitingCirclesDemo } from "@/components/ui/oribiting-circles-demo";
@@ -41,9 +42,8 @@ export const ServicesSection = () => {
   return (
     <section id="services" className="container py-24 sm:py-32 px-8 lg:px-36">
       <div className="grid md:grid-cols-2 place-items-center lg:gap-20">
-        <div className="order-2 md:order-1 w-full">
-          <AnimatedListDemo />
-        </div>
+        <DisplayCardsDemo />
+
         <div className="w-full flex flex-col justify-center items-end text-right order-1 md:order-2">
           <h2 className="text-lg text-primary mb-2 tracking-wider">Track</h2>
 
