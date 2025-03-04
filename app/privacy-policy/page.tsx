@@ -4,7 +4,7 @@ import { FooterSection } from "@/components/layout/sections/footer";
 export const metadata: Metadata = {
   title: "Privacy Policy | Essio AI",
   description: "Privacy Policy for Essio AI - Learn how we collect, use, and protect your personal information",
-  robots: "noindex, nofollow", // Remove if you want it indexed
+  robots: "index, follow",
   openGraph: {
     title: "Privacy Policy | Essio AI",
     description: "Privacy Policy for Essio AI - Learn how we collect, use, and protect your personal information",

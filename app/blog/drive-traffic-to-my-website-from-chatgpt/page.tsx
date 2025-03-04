@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Drive traffic to my website from ChatGPT",
   description:
     "A comprehensive guide on leveraging ChatGPT to drive traffic to your website and optimize for AI visibility",
-  robots: "noindex, nofollow", // Remove if you want it indexed
+  robots: "index, follow",
   openGraph: {
     title: "Drive traffic to my website from ChatGPT",
     description:

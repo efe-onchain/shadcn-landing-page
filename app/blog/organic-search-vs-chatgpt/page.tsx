@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Organic Search vs ChatGPT",
   description:
     "A comprehensive comparison of organic search and ChatGPT, exploring their roles in modern digital strategies",
-  robots: "noindex, nofollow", // Remove if you want it indexed
+  robots: "index, follow",
   openGraph: {
     title: "Organic Search vs ChatGPT",
     description:

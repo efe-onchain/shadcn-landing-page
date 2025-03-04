@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Steps to make ChatGPT more knowledgeable about my brand",
   description: "A comprehensive guide on enhancing your brand's presence and visibility in ChatGPT's knowledge base",
-  robots: "noindex, nofollow", // Remove if you want it indexed
+  robots: "index, follow",
   openGraph: {
     title: "Steps to make ChatGPT more knowledgeable about my brand",
     description: "A comprehensive guide on enhancing your brand's presence and visibility in ChatGPT's knowledge base",

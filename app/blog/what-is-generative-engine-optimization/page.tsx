@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "What is Generative Engine Optimization?",
   description: "A comprehensive guide to understanding Generative Engine Optimization (GEO) and its importance in 2025",
-  robots: "noindex, nofollow", // Remove if you want it indexed
+  robots: "index, follow",
   openGraph: {
     title: "What is Generative Engine Optimization?",
     description:
