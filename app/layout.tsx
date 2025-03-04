@@ -131,6 +131,7 @@ export default function RootLayout({
         <meta name="msvalidate.01" content="D28219F6475C8E4D68EF02ABF27ADBD5" />
         <meta name="OAI-SearchBot" content="index,follow" />
         <Script async src="https://cdn.seline.so/seline.js" data-token="e38ab5637034c9e" strategy="beforeInteractive" />
+        <Script src="https://darkvisitors.com/tracker.js?project_key=cf5be4c3-6227-44d3-8d0a-35ac731cb683"></Script>
 
         <meta name="PerplexityBot" content="index,follow" />
       </head>
