@@ -116,7 +116,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <GoogleTagManager gtmId="G-NBBV67PXL5" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NBBV67PXL5"></Script>
+        <Script id="google-tag-manager">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NBBV67PXL5');
+          `}
+        </Script>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
