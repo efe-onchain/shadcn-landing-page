@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ESSIO - AI Brand Visibility Platform",
     description: "Track and optimize your brand's visibility across AI search platforms.",
-    creator: "@essio",
+    creator: "@getessio",
     images: ["/opengraph-image.png"],
   },
 };
@@ -84,8 +84,8 @@ function addWebsiteJsonLd() {
       "logo": "https://essio.ai/opengraph-image.png",
       "description": "Track and optimize your brand's visibility across AI search platforms like ChatGPT, Claude, and Gemini.",
       "sameAs": [
-        "https://twitter.com/essio",
-        "https://linkedin.com/company/essio"
+        "https://twitter.com/getessio",
+        "https://linkedin.com/company/essio-ai"
       ]
     }`,
   };
